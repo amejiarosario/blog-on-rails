@@ -1,0 +1,11 @@
+= form_for([@post, @post.comments.build]) do |f|
+  .field
+    = f.label :commenter 
+    %br
+    = f.text_field :commenter
+  .field
+    = f.label :body
+    %br
+    = f.text_field :body
+  .actions
+    = f.submit

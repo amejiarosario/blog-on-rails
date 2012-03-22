@@ -1,0 +1,8 @@
+%p
+  %b Commenter:
+  = comment.commenter
+%p
+  %b Comment:
+  = comment.body
+%p
+  = link_to 'delete', [comment.post, comment], confirm: 'R U sure?', method: :delete 
