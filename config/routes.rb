@@ -1,4 +1,18 @@
 Blog::Application.routes.draw do
+  resources :projects
+
+  resources :companies
+
+  get "admin/index"
+
+  get "contact/index"
+
+  get "about/index"
+
+  get "blog/index"
+
+  get "portfolio/index"
+
   resources :posts do
     resources :comments
   end

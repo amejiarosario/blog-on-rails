@@ -11,7 +11,7 @@
   = @post.content
 %p
   %b Tags:
-  = join_tags(@post)
+  = @post.list_tags
 
 %hr
 %h2 Comments:
@@ -23,5 +23,4 @@
 
 
 = link_to 'Edit', edit_post_path(@post)
-\|
-= link_to 'Back', posts_path
+=# link_to 'Back', posts_path

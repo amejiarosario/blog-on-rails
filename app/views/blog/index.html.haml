@@ -1,0 +1,10 @@
+%h1 Blog#index
+%p Find me in app/views/blog/index.html.haml
+
+- @posts.each do |post|
+	%h3= link_to post.title, post
+	%p= "by #{post.name}" #" in #{post.timestamp}"
+	%p= post.content
+	%p= "tags: "+post.list_tags
+	%p= "#{post.comments.length} comments."
+	%hr
