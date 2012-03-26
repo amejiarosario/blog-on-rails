@@ -3,7 +3,7 @@
 
 - @posts.each do |post|
 	%h3= link_to post.title, post
-	%p= "by #{post.name}" #" in #{post.timestamp}"
+	%p= "by #{post.name} in #{post.created_at}"
 	%p= post.content
 	%p= "tags: "+post.list_tags
 	%p= "#{post.comments.length} comments."

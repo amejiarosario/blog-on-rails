@@ -6,7 +6,6 @@ class CreateProjects < ActiveRecord::Migration
       t.date :end_date
       t.text :description
       t.string :technologies
-      t.string :title
 
       t.timestamps
     end
