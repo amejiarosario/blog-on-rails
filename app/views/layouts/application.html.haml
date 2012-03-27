@@ -1,0 +1,24 @@
+!!! html
+%html
+	%head
+		%title Blog
+		= stylesheet_link_tag "bootstrap"
+		= stylesheet_link_tag "boostrap-responsive"		
+		= stylesheet_link_tag "application", :media => "all"
+		= javascript_include_tag "application"
+		= javascript_include_tag "bootstrap"
+		= csrf_meta_tags
+	%body
+		= link_to "Home", :controller=>:home 
+		\|
+		= link_to "Portfolio", :controller=>:portfolio
+		\|
+		= link_to "Blog", :controller=>:blog
+		\|
+		= link_to "About", :controller=>:about
+		\|
+		= link_to "Contact", :controller=>:contact
+		\|
+		= link_to "Admin", :controller=>:admin
+
+		= yield
