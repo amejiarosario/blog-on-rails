@@ -9,16 +9,23 @@
 		= javascript_include_tag "bootstrap"
 		= csrf_meta_tags
 	%body
-		= link_to "Home", :controller=>:home 
-		\|
-		= link_to "Portfolio", :controller=>:portfolio
-		\|
-		= link_to "Blog", :controller=>:blog
-		\|
-		= link_to "About", :controller=>:about
-		\|
-		= link_to "Contact", :controller=>:contact
-		\|
-		= link_to "Admin", :controller=>:admin
+		%header
+			
+			%nav
+				= link_to "Home", :controller=>:home 
+				\|
+				= link_to "Portfolio", :controller=>:portfolio
+				\|
+				= link_to "Blog", :controller=>:blog
+				\|
+				= link_to "About", :controller=>:about
+				\|
+				= link_to "Contact", :controller=>:contact
+				\|
+				= link_to "Admin", :controller=>:admin
 
-		= yield
+		%section
+			= yield
+
+		%footer
+			Adrian Mejia &copy; 2012
