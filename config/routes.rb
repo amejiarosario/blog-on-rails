@@ -1,23 +1,22 @@
 Blog::Application.routes.draw do
-  resources :projects
-
-  resources :companies
-
+  
+  get "home/index"
   get "admin/index"
-
   get "contact/index"
-
   get "about/index"
-
   get "blog/index"
-
   get "portfolio/index"
 
+  resources :tags       #get "tags/show"
+  resources :projects
+  resources :companies
   resources :posts do
     resources :comments
   end
 
-  get "home/index"
+
+  
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

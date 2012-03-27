@@ -8,7 +8,4 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :tags, allow_destroy: :true, 
     reject_if: proc{ |attrs| attrs.all?{|k,v| v.blank? } }
     
-  def list_tags
-    self.tags.map { |t| t.name }.join(", ") if not self.tags.nil?
-  end
 end
