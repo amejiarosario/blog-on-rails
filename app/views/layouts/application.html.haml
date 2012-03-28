@@ -1,31 +1,49 @@
 !!! html
 %html
 	%head
-		%title Blog
-		= stylesheet_link_tag "bootstrap"
-		= stylesheet_link_tag "boostrap-responsive"		
+		%title= @title
 		= stylesheet_link_tag "application", :media => "all"
+		= stylesheet_link_tag "bootstrap"
+		= stylesheet_link_tag "bootstrap-responsive"
 		= javascript_include_tag "application"
 		= javascript_include_tag "bootstrap"
 		= csrf_meta_tags
+		=raw '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
 	%body
 		%header
-			
 			%nav
-				= link_to "Home", :controller=>:home 
-				\|
-				= link_to "Portfolio", :controller=>:portfolio
-				\|
-				= link_to "Blog", :controller=>:blog
-				\|
-				= link_to "About", :controller=>:about
-				\|
-				= link_to "Contact", :controller=>:contact
-				\|
-				= link_to "Admin", :controller=>:admin
+				%ul{:class => "nav nav-pills"}
+					%li{:class => active?(@title, "Home") }= link_to "Home", home_index_path
+					%li{:class => active?(@title, "Portfolio") }= link_to "Portfolio", portfolio_index_path
+					%li{:class => active?(@title, "Blog") }= link_to "Blog", blog_index_path
+					%li{:class => active?(@title, "About") }= link_to "About", about_index_path
+					%li{:class => active?(@title, "Contact") }= link_to "Contact", contact_index_path
+					%li{:class => active?(@title, "Admin") }= link_to "Admin", admin_index_path
 
-		%section
-			= yield
+		%section.container-fluid
+			%div.row-fluid
+				%div.span8
+					-# <!--Body content-->
+					= yield
+				%div.span4
+					-# <!--Sidebar content-->
+					%nav SUBMENU STUB
 
 		%footer
-			Adrian Mejia &copy; 2012
+			Adrian Mejia &copy;
+			= Time.now.year
+			
+			
+/ 
+	%div.navbar
+		%div.navbar-inner
+			%div.container
+				%a.brand Adrian Mejia
+				%div.nav-collapse
+					%ul.nav
+						%li.active= link_to "Home", :controller=>:home 
+						%li= link_to "Portfolio", :controller=>:portfolio
+						%li= link_to "Blog", :controller=>:blog
+						%li= link_to "About", :controller=>:about
+						%li= link_to "Contact", :controller=>:contact
+						%li= link_to "Admin", :controller=>:admin

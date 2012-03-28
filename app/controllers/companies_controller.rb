@@ -2,6 +2,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
+    @title = "Companies"
     @companies = Company.all
 
     respond_to do |format|
