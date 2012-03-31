@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
   
+  resources :users
+
   get "home/index"
   get "admin/index"
   get "contact/index"
