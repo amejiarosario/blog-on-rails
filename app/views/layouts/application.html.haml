@@ -29,7 +29,9 @@
 						= yield
 					%div.span2
 						-# <!--Sidebar content-->
-						%nav SUBMENU STUB
+						%nav
+							%ul{:class=>"nav nav-tabs nav-stacked"}
+								%li= link_to "Register", register_path
 
 			%footer
 				Adrian Mejia &copy;

@@ -1,7 +1,5 @@
 Blog::Application.routes.draw do
   
-  resources :users
-
   get "home/index"
   get "admin/index"
   get "contact/index"
@@ -9,12 +7,15 @@ Blog::Application.routes.draw do
   get "blog/index"
   get "portfolio/index"
 
+  resources :users
   resources :tags       #get "tags/show"
   resources :projects
   resources :companies
   resources :posts do
     resources :comments
   end
+  
+  match '/register', :to => 'users#new'
 
 
   
