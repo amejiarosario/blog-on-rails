@@ -5,14 +5,13 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
 gem 'haml'
 gem 'haml-rails'
 gem 'gravatar_image_tag'
 
-group :development do
+group :development, :test do
   gem 'rspec-rails'
+  gem 'sqlite3'
 end
 
 group :test do
@@ -20,6 +19,10 @@ group :test do
   gem 'webrat'
   gem 'spork'
   gem 'factory_girl_rails'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Gems used only for assets and not required
