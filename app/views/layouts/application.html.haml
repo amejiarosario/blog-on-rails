@@ -4,10 +4,10 @@
 		- @title = "" if @title.nil?
 		%title= @title
 		= stylesheet_link_tag "application", :media => "all"
-		= stylesheet_link_tag "bootstrap"
-		= stylesheet_link_tag "bootstrap-responsive"
 		= javascript_include_tag "application"
-		= javascript_include_tag "bootstrap"
+		= stylesheet_link_tag "twitter/bootstrap"
+		= stylesheet_link_tag "twitter/bootstrap-responsive"
+		= javascript_include_tag "twitter/bootstrap"
 		= csrf_meta_tags
 		=raw '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
 	%body
