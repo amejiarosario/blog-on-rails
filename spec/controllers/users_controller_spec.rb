@@ -19,7 +19,8 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe UsersController do
-
+  render_views
+  
   # This should return the minimal set of attributes required to create a valid
   # User. As you add validations to User, be sure to
   # update the return value of this method accordingly.
@@ -34,6 +35,7 @@ describe UsersController do
     {}
   end
 
+
   describe "GET index" do
     it "assigns all users as @users" do
       user = User.create! valid_attributes
@@ -42,12 +44,43 @@ describe UsersController do
     end
   end
 
+  it "should have the right title" do
+    get 'new'
+    response.should have_selector("title", :content => "Register")
+  end
+
   describe "GET show" do
-    it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
-      get :show, {:id => user.to_param}, valid_session
-      assigns(:user).should eq(user)
+    before(:each) do
+      @user = Factory(:user)
+      # the stub will cause RSpec to intercept the call to User.find and, instead of hitting the database, return @user instead.
+      User.stub!(:find, @user.id).and_return(@user)
     end
+    
+    it "should be successful" do
+      get :show, :id => @user
+      response.should be_success
+    end
+    
+    it "should find the right user" do
+      get :show, :id => @user
+      assigns(:user).should eq(@user)
+    end
+    
+    it "should have the right title" do
+      get :show, :id => @user
+      response.should have_selector("title", :content => @user.name)
+    end
+    
+    it "should include the user's name" do
+      get :show, :id => @user
+      response.should have_selector("h1", :content => @user.name)
+    end
+    
+    it "should have a profile image" do
+      get :show, :id => @user
+      response.should have_selector("h1>img", :class => "gravatar")
+    end
+    
   end
 
   describe "GET new" do

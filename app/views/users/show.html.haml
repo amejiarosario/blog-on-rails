@@ -1,14 +1,16 @@
 %p#notice= notice
 
+
+%h1
+	= gravatar_for @user
+	= @user.name
+	
 %p
-  %b Name:
-  = @user.name
+	%b Email:
+	= @user.email
 %p
-  %b Email:
-  = @user.email
-%p
-  %b Password:
-  = @user.password
+	%b Password:
+	= @user.password
 
 = link_to 'Edit', edit_user_path(@user)
 \|

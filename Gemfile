@@ -9,6 +9,7 @@ gem 'sqlite3'
 
 gem 'haml'
 gem 'haml-rails'
+gem 'gravatar_image_tag'
 
 group :development do
   gem 'rspec-rails'
@@ -18,6 +19,7 @@ group :test do
   gem 'rspec'
   gem 'webrat'
   gem 'spork'
+  gem 'factory_girl_rails'
 end
 
 # Gems used only for assets and not required
