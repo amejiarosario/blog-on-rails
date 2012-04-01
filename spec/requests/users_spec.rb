@@ -22,6 +22,17 @@ describe "Users" do
         response.should have_selector("div#error_explanation")
       end
     end
+    describe "sign in/out" do
+      describe "failure" do
+        it "should not sign a user in" do
+          visit login_path
+          fill_in :email, :with => ""
+          fill_in :password, :with => ""
+          click_button
+          response.should have_selector("div#error_explanation h2", :content => "Invalid")
+        end
+      end
+    end
     describe "success" do
       it "should make a new user" do
         lambda do
