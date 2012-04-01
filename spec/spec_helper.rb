@@ -8,6 +8,11 @@ Spork.prefork do
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
 
+  #My own
+  def test_sign_in(user)
+    controller.sign_in(user)
+  end
+
 end
 
 Spork.each_run do
@@ -78,4 +83,5 @@ RSpec.configure do |config|
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
+  
 end

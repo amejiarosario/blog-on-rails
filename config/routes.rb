@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
   
+  get "sessions/destroy"
+  get "sessions/new"
   get "home/index"
   get "admin/index"
   get "contact/index"
@@ -7,6 +9,7 @@ Blog::Application.routes.draw do
   get "blog/index"
   get "portfolio/index"
 
+  resources :sessions
   resources :users
   resources :tags       #get "tags/show"
   resources :projects
@@ -16,7 +19,8 @@ Blog::Application.routes.draw do
   end
   
   match '/register', :to => 'users#new'
-
+  match '/login', :to => 'sessions#new'
+  match '/logout', :to => 'sessions#destroy'
 
   
  
