@@ -3,8 +3,6 @@ class SessionsController < ApplicationController
   
   def new
     @title = 'Log in'
-    #validates :email, :presence => true
-    #validates :name,  :presence   => true
   end
 
   def destroy

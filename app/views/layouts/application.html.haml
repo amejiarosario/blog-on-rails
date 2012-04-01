@@ -31,15 +31,22 @@
 						-# <!--Sidebar content-->
 						%nav
 							%ul{:class=>"nav nav-tabs nav-stacked"}
-								%li= link_to "Login", login_path
-								%li= link_to "Register", register_path
+								- if signed_in?
+									%li= link_to "Logout", logout_path
+									%li= link_to "Profile", current_user
+								- else
+									%li= link_to "Login", login_path
+									%li= link_to "Register", register_path
 
 			%footer
 				Adrian Mejia &copy;
 				= Time.now.year
 			
 			%hr
-			= debug(params) if Rails.env.development?			
+			- if Rails.env.development?
+				= debug(params) 			
+				%br
+				= debug(flash)
 			
 / 
 	%div.navbar

@@ -44,7 +44,6 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @title = "Register"
     @user = User.new(params[:user])
 
     respond_to do |format|
@@ -52,6 +51,7 @@ class UsersController < ApplicationController
         format.html { redirect_to @user, notice: "Welcome #{@user.name}!" }
         format.json { render json: @user, status: :created, location: @user }
       else
+        @title = "Register"
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
