@@ -1,23 +1,12 @@
-%h1 Listing posts
+%h1 Posts
 
-%table
-  %tr
-    %th Name
-    %th Title
-    %th Content
-    %th
-    %th
-    %th
-
-  - @posts.each do |post|
-    %tr
-      %td= post.name
-      %td= post.title
-      %td= post.content
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Post', new_post_path
+- if @posts.empty?
+	%p No posts
+- else
+	- @posts.each do |post|
+		%article
+			%h2= link_to post.title, post
+			%p.details=raw "by #{link_to "#{post.user.name}", post.user} in #{l post.created_at, format: :post}"
+			%p=raw truncate(h(post.content), length: 600, omission: "... #{link_to "Read more", post }")
+			%p.tags=raw "Tags: #{post_tags(post)}"
+			%p.comments= pluralize(post.comments.length, "comment") + "."

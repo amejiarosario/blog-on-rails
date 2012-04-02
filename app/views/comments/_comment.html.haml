@@ -1,8 +1,6 @@
-%p
-  %b Commenter:
-  = comment.commenter
-%p
-  %b Comment:
-  = comment.body
-%p
-  = link_to 'delete', [comment.post, comment], confirm: 'R U sure?', method: :delete 
+.comment
+	%b= comment.commenter
+	%p= comment.body
+
+-if signed_in?
+	= link_to 'delete', [comment.post, comment], confirm: 'R U sure?', method: :delete 
