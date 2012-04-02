@@ -1,10 +1,12 @@
-%h1 Blog#index
-%p Find me in app/views/blog/index.html.haml
+%h1 Posts
 
-- @posts.each do |post|
-	%h3= link_to post.title, post
-	%p= "by #{post.name} in #{post.created_at}"
-	%p= post.content
-	%p=raw "tags: " + post_tags(post)
-	%p= "#{post.comments.length} comments."
-	%hr
+- if @posts.empty?
+	%p No posts
+- else
+	- @posts.each do |post|
+		%article
+			%h3= link_to post.title, post
+			%p.details=raw "by #{link_to "#{post.user.name}", post.user} in #{l post.created_at, format: :post}"
+			%p= post.content
+			%p.tags=raw "tags: " + post_tags(post)
+			%p.comments= pluralize(post.comments.length, "comment") + "."

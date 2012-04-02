@@ -7,14 +7,11 @@
         - @post.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :name
-    = f.text_field :name
-  .field
     = f.label :title
     = f.text_field :title
   .field
     = f.label :content
-    = f.text_field :content
+    = f.text_area :content, :rows => 5
   %h2 Tags:
   = render :partial => 'tags/form', :locals => {:form => f}
   .actions

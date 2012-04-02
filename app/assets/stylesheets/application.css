@@ -12,6 +12,17 @@
  *= require_tree .
 */
 
+footer {
+	/*text-align: center;*/
+	color:grey;
+	/*position:fixed;*/
+   	bottom:0;
+	/*left:auto;*/
+   	width:100%;
+	margin-top:60px;
+   	height:30px;   /* Height of the footer */
+}
+
 /*
 .container{
 	width:710px;
@@ -114,12 +125,7 @@ a.signup_button {
 }
 
 
-footer {
-	text-align: center;
-	margin-top: 10px;
-	margin-left: auto;
-	margin-right: auto;
-}
+
 
 footer nav{
 	float:none;

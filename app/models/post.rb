@@ -1,7 +1,9 @@
 class Post < ActiveRecord::Base
-  validates :name, :presence => true
-  validates :title, :presence => true, :length => { :minimum => 5}
-  
+  #validates :name, :presence => true
+  validates :title, :presence => true, :length => { :minimum => 2}
+
+
+  belongs_to :user  
   has_many :comments, dependent: :destroy
   has_and_belongs_to_many :tags
   

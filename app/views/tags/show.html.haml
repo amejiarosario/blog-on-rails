@@ -1,3 +1,8 @@
-%ul
-	- @tag.posts.each do |project|
-		%li= link_to project.title, project
+%h1= "Post with '#{@tag.name}' tag:"
+
+- if @tag.posts.empty?
+	%p No posts
+- else
+	%ul
+		- @tag.posts.each do |project|
+			%li= link_to project.title, project
