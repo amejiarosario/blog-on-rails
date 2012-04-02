@@ -1,4 +1,4 @@
 %div.hero-unit
 	%h1 Hello World!
-	%p=raw "Here you can find #{link_to "articles", :controller=>:blog} (mostly related to technology and programming), projects and work experiences entries, ..."
+	%p=raw "Here you can find #{link_to "articles", posts_path } (mostly related to technology and programming), projects and work experiences entries, ..."
 	=link_to "Read Articles", {:controller=>:blog}, :class=>"btn btn-primary btn-large"
