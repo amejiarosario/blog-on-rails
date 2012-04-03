@@ -5,9 +5,11 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# My Gems
 gem 'haml'
 gem 'haml-rails'
 gem 'gravatar_image_tag'
+gem 'tinymce-rails'
 
 group :development, :test do
   gem 'rspec-rails'

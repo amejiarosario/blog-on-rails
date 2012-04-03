@@ -4,6 +4,7 @@
 		- @title = "" if @title.nil?
 		%title= @title
 		= stylesheet_link_tag "application", :media => "all"
+		= tinymce_assets 
 		= javascript_include_tag "application"
 		= stylesheet_link_tag "twitter/bootstrap"
 		= stylesheet_link_tag "twitter/bootstrap-responsive"
