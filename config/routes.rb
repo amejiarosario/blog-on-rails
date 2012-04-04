@@ -8,7 +8,8 @@ Blog::Application.routes.draw do
   get "about/index"
   get "blog/index"
   get "portfolio/index"
-
+  
+  resources :contacts
   resources :sessions
   resources :users
   resources :tags       #get "tags/show"
@@ -21,7 +22,7 @@ Blog::Application.routes.draw do
   match '/register', :to => 'users#new'
   match '/login', :to => 'sessions#new'
   match '/logout', :to => 'sessions#destroy'
-
+  match '/contact', :to => 'contact#new'
   
  
 
