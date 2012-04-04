@@ -6,7 +6,7 @@
 
 %h2= @post.title
 %p.details=raw "by #{link_to "#{@post.user.name}", @post.user} in #{l @post.created_at, format: :post}"
-%p= @post.content
+%p=raw @post.content
 %b.tags Tags: 
 =raw post_tags(@post)
 

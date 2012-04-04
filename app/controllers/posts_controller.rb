@@ -45,7 +45,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = current_user.posts.create(params[:post])
-    
+    # TODO sanitize @post.body, :tags => %w(script style), :attributes => %w(id class style)
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }

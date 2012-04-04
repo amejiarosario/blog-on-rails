@@ -7,6 +7,6 @@
 		%article
 			%h2= link_to post.title, post
 			%p.details=raw "by #{link_to "#{post.user.name}", post.user} in #{l post.created_at, format: :post}"
-			%p=raw truncate(h(post.content), length: 600, omission: "... #{link_to "Read more", post }")
+			%p=raw truncate(strip_tags(post.content), length: 600, omission: "... #{link_to "Read more", post }")
 			%p.tags=raw "Tags: #{post_tags(post)}"
 			%p.comments= pluralize(post.comments.length, "comment") + "."
