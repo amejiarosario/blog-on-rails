@@ -1,7 +1,7 @@
 %div.hero-unit
 	%h1 Hello World!
 	%p=raw "Here you can find #{link_to "articles", posts_path } (mostly related to technology and programming), projects and work experiences entries, ..."
-	=link_to "Read Articles", {:controller=>:blog}, :class=>"btn btn-primary btn-large"
+	=link_to "Read Articles", posts_path, :class=>"btn btn-primary btn-large"
 	
 - if @recent_posts.any?
 	%h2 Recents Posts:

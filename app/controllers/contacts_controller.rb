@@ -29,6 +29,7 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   # GET /contacts/new.json
   def new
+    @title = "Contact"
     @contact = Contact.new
 
     respond_to do |format|

@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController  
   def new
-    @title = 'Log in'
+    @title = 'Login'
   end
 
   def destroy

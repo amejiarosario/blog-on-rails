@@ -23,7 +23,7 @@
 						- if signed_in?
 							%li{:class => active?(@title, "Admin") }= link_to "Admin", admin_index_path
 						- else
-							%li= link_to "Login", login_path
+							%li{:class => active?(@title, "Login") }= link_to "Login", login_path
 
 			%section.container-fluid{id: "main-content"}
 				%div.row-fluid
@@ -39,14 +39,16 @@
 									%li= link_to "Create a Post", new_post_path
 									%li= link_to "Logout", logout_path
 
-
+			
 			%footer
+				%hr
 				= "Copyright © 2011-#{Time.now.year} by "
 				= link_to "Adrian Mejia", "http://adrianmejia.com"
 				· All Rights Reserved.
 		
-			%hr
+			
 			- if Rails.env.development?
+				%hr
 				= debug(params) 			
 				%br
 				= debug(flash)
