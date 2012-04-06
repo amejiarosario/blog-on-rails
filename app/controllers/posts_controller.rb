@@ -1,3 +1,5 @@
+include ApplicationHelper
+
 class PostsController < ApplicationController
   #http_basic_authenticate_with name: "admin", password: "1234", except: [:index, :show]
   before_filter :require_login, :except => [:index, :show]
@@ -84,13 +86,4 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  
-  private 
-    def require_login
-      unless signed_in?
-        flash[:error] = "You must login first before access this section."
-        redirect_to login_path
-      end
-    end
 end

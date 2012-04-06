@@ -1,6 +1,4 @@
-class SessionsController < ApplicationController
-  
-  
+class SessionsController < ApplicationController  
   def new
     @title = 'Log in'
   end

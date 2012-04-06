@@ -1,6 +1,7 @@
+include ApplicationHelper
 class CommentsController < ApplicationController
-  
-  http_basic_authenticate_with name: "admin", password: "1234", only: :destroy
+  before_filter :require_login, :only => [:destroy]
+  #http_basic_authenticate_with name: "admin", password: "1234", only: :destroy
   
   def create
     @post = Post.find(params[:post_id])

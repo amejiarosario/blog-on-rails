@@ -1,4 +1,9 @@
+include ApplicationHelper
+
 class ContactsController < ApplicationController
+  before_filter :require_login, :except => [:create, :new]
+  @title = "Contact"
+  
   # GET /contacts
   # GET /contacts.json
   def index

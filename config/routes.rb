@@ -5,11 +5,10 @@ Blog::Application.routes.draw do
   get "home/index"
   get "admin/index"
   get "contact/index"
-  get "about/index"
-  get "blog/index"
+  get "about/index"  
   get "portfolio/index"
   
-  resources :contacts
+  resources :contacts #, only: [:new, :create]
   resources :sessions
   resources :users
   resources :tags       #get "tags/show"

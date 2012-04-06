@@ -1,4 +1,7 @@
+include ApplicationHelper
+
 class CompaniesController < ApplicationController
+  before_filter :require_login, except: [:index]
   # GET /companies
   # GET /companies.json
   def index

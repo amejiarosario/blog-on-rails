@@ -4,7 +4,6 @@
 		- @title = "" if @title.nil?
 		%title= @title
 		= stylesheet_link_tag "application", :media => "all"
-		= tinymce_assets 
 		= javascript_include_tag "application"
 		= stylesheet_link_tag "twitter/bootstrap"
 		= stylesheet_link_tag "twitter/bootstrap-responsive"
@@ -26,7 +25,7 @@
 						- else
 							%li= link_to "Login", login_path
 
-			%section.container-fluid
+			%section.container-fluid{id: "main-content"}
 				%div.row-fluid
 					%div.span10
 						-# <!--Body content-->
@@ -45,7 +44,7 @@
 				= "Copyright © 2011-#{Time.now.year} by "
 				= link_to "Adrian Mejia", "http://adrianmejia.com"
 				· All Rights Reserved.
-			
+		
 			%hr
 			- if Rails.env.development?
 				= debug(params) 			
