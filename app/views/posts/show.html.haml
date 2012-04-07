@@ -2,7 +2,7 @@
 = render "layouts/flash_errors"
 
 -if signed_in?
-	%div.pull-right= link_to 'Edit Post', edit_post_path(@post)
+	%div.pull-right=raw "#{link_to 'edit', edit_post_path(@post)} | #{link_to 'delete', @post, :confirm => 'Are you sure?', :method => :delete}"
 
 %h2= @post.title
 %p.details=raw "by #{link_to "#{@post.user.name}", @post.user} in #{l @post.created_at, format: :post}"
