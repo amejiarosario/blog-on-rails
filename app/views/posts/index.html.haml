@@ -10,4 +10,4 @@
 			%p.details=raw "#{l post.created_at, format: :post}"
 			%p=raw truncate(strip_tags(post.content), length: 600, omission: "... #{link_to "Read more", post }")
 			%p.tags=raw "Tags: #{post_tags(post)}"
-			%p.comments= pluralize(post.comments.length, "comment") + "."
+			%p.comments= pluralize(post.comments.length, "comment") + "." if post.comments.length > 0
