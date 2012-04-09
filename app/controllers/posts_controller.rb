@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @title = "Blog"
-    @posts = Post.all
+    @posts = Post.all order: "updated_at DESC"
 
     respond_to do |format|
       format.html # index.html.erb
