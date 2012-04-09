@@ -5,20 +5,20 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#   cities = City.create!([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create!(name: 'Emanuel', city: cities.first)
 
 # users
-adrian = User.create(name: 'Adrian Mejia', email: 'adriansky@gmail.com', password: 'recrins')
+adrian = User.create!(name: 'Adrian Mejia', email: 'adriansky@gmail.com', password: 'recrins')
 adrian.save
 
 
 # Tags
-# tag_rails = Tag.create(:name=>"rails")
-# tag_ruby = Tag.create(:name=>"ruby")
-# tag_economy = Tag.create(:name=>"economy")
+# tag_rails = Tag.create!(:name=>"rails")
+# tag_ruby = Tag.create!(:name=>"ruby")
+# tag_economy = Tag.create!(:name=>"economy")
 # Posts
-#post = adrian.posts.create(:name=>'Adrian Mejia', :title=>'Ruby on Rails Rocks!', :content=>'This is just my humble opinion :)')
+#post = adrian.posts.create!(:name=>'Adrian Mejia', :title=>'Ruby on Rails Rocks!', :content=>'This is just my humble opinion :)')
 #post.tags << tag_rails
 # adrian.posts
 # adrian.posts.first.tags
@@ -31,143 +31,143 @@ adrian.save
 
 
 # Tags
-tag_samba = Tag.create(:name=>"samba")
-tag_ubuntu = Tag.create(:name=>"ubuntu")
-tag_linux = Tag.create(:name=>"linux")
-tag_seo = Tag.create(:name=>"seo")
-tag_drupal = Tag.create(:name=>"drupal")
-tag_google = Tag.create(:name=>"google")
-tag_twitter = Tag.create(:name=>"twitter")
-tag_facebook = Tag.create(:name=>"facebook")
-tag_programming = Tag.create(:name=>"programming")
-tag_social_media = Tag.create(:name=>"social media")
-tag_internet = Tag.create(:name=>"internet")
-tag_windows = Tag.create(:name=>"windows")
-tag_tips = Tag.create(:name=>"tips")
-tag_how_to = Tag.create(:name=>"how-to")
-tag_tips = Tag.create(:name=>"tips")
-tag_c_ = Tag.create(:name=>"c#")
-tag_gotchas = Tag.create(:name=>"gotchas")
-tag__net = Tag.create(:name=>".net")
-tag_how_to = Tag.create(:name=>"how-to")
-tag_git = Tag.create(:name=>"git")
-tag_github = Tag.create(:name=>"github")
-tag_how_to = Tag.create(:name=>"how-to")
-tag_php = Tag.create(:name=>"php")
-tag_dom = Tag.create(:name=>"dom")
-tag_xml = Tag.create(:name=>"xml")
-tag_product_lines = Tag.create(:name=>"product lines")
-tag_bug = Tag.create(:name=>"bug")
-tag_testing = Tag.create(:name=>"testing")
-tag_microsoft = Tag.create(:name=>"microsoft")
-tag_freescale = Tag.create(:name=>"freescale")
-tag_zune = Tag.create(:name=>"zune")
-tag_ruby_on_rails = Tag.create(:name=>"ruby on rails")
-tag_software_architecture = Tag.create(:name=>"software architecture")
-tag_web_frameworks = Tag.create(:name=>"web frameworks")
-tag_web_development = Tag.create(:name=>"web development")
-tag_agile_frameworks = Tag.create(:name=>"agile frameworks")
-tag_twitter = Tag.create(:name=>"twitter")
-tag_unix = Tag.create(:name=>"unix")
-tag_crontab = Tag.create(:name=>"crontab")
-tag_git = Tag.create(:name=>"git")
-tag_drupal = Tag.create(:name=>"drupal")
-tag_drush = Tag.create(:name=>"drush")
-tag_how_to = Tag.create(:name=>"how-to")
-tag_software_engineering = Tag.create(:name=>"software engineering")
-tag_reverse_engineering = Tag.create(:name=>"reverse engineering")
-tag_gui = Tag.create(:name=>"gui")
-tag_aspect_oriented_programming = Tag.create(:name=>"aspect oriented programming")
-tag_aspectj = Tag.create(:name=>"aspectj")
-tag_dynamic_analysis = Tag.create(:name=>"dynamic analysis")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_wide_spectrum_language__wsl_ = Tag.create(:name=>"wide spectrum language (wsl)")
-tag_unified_modelling_language__uml_ = Tag.create(:name=>"unified modelling language (uml)")
-tag_reverse_engineering = Tag.create(:name=>"reverse engineering")
-tag_cobol_legacy_systems = Tag.create(:name=>"cobol legacy systems")
-tag_reengineering = Tag.create(:name=>"reengineering")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_focused_crawling = Tag.create(:name=>"focused crawling")
-tag_metadata_extraction = Tag.create(:name=>"metadata extraction")
-tag_learning_object_management = Tag.create(:name=>"learning object management")
-tag_ontology = Tag.create(:name=>"ontology")
-tag_e_learning = Tag.create(:name=>"e-learning")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_e_learning = Tag.create(:name=>"e-learning")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_hypertext_generation = Tag.create(:name=>"hypertext generation")
-tag_adaptation = Tag.create(:name=>"adaptation")
-tag_personalisation = Tag.create(:name=>"personalisation")
-tag_open_corpus_content = Tag.create(:name=>"open corpus content")
-tag_metadata_generation = Tag.create(:name=>"metadata generation")
-tag_e_learning = Tag.create(:name=>"e-learning")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_e_learning = Tag.create(:name=>"e-learning")
-tag_web_semantics = Tag.create(:name=>"web semantics")
-tag_focused_crawling = Tag.create(:name=>"focused crawling")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_social_bookmarking = Tag.create(:name=>"social bookmarking")
-tag_e_learning = Tag.create(:name=>"e-learning")
-tag_web_semantics = Tag.create(:name=>"web semantics")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_e_learning = Tag.create(:name=>"e-learning")
-tag_focused_crawling = Tag.create(:name=>"focused crawling")
-tag_web_semantics = Tag.create(:name=>"web semantics")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_e_learning = Tag.create(:name=>"e-learning")
-tag_paper_review = Tag.create(:name=>"paper review")
-tag_e_learning = Tag.create(:name=>"e-learning")
-tag_drupal = Tag.create(:name=>"drupal")
-tag_ms_access = Tag.create(:name=>"ms access")
-tag_sql = Tag.create(:name=>"sql")
-tag_visual_basic = Tag.create(:name=>"visual basic")
-tag_macros = Tag.create(:name=>"macros")
-tag_how_to = Tag.create(:name=>"how-to")
-tag_drupal = Tag.create(:name=>"drupal")
-tag_wysiwyg = Tag.create(:name=>"wysiwyg")
-tag_imce = Tag.create(:name=>"imce")
-tag_ckeditor = Tag.create(:name=>"ckeditor")
-tag_git = Tag.create(:name=>"git")
-tag_ftp = Tag.create(:name=>"ftp")
-tag_web_development = Tag.create(:name=>"web development")
-tag_drupal = Tag.create(:name=>"drupal")
-tag_gitignore = Tag.create(:name=>"gitignore")
-tag_c_ = Tag.create(:name=>"c#")
-tag_csv = Tag.create(:name=>"csv")
-tag_regex = Tag.create(:name=>"regex")
-tag_java = Tag.create(:name=>"java")
-tag_mac = Tag.create(:name=>"mac")
-tag_how_to = Tag.create(:name=>"how-to")
-tag_algorithms = Tag.create(:name=>"algorithms")
-tag_runtime_analysis = Tag.create(:name=>"runtime analysis")
-tag_analysis_of_algorithm = Tag.create(:name=>"analysis of algorithm")
-tag_for_dummies = Tag.create(:name=>"for dummies")
-tag_big_o = Tag.create(:name=>"big-o")
-tag_concentration = Tag.create(:name=>"concentration")
-tag_procrastination = Tag.create(:name=>"procrastination")
-tag_attention = Tag.create(:name=>"attention")
-tag_ssh = Tag.create(:name=>"ssh")
-tag_ubuntu = Tag.create(:name=>"ubuntu")
-tag_linux = Tag.create(:name=>"linux")
-tag_cli = Tag.create(:name=>"cli")
-tag_command_line = Tag.create(:name=>"command line")
-tag_how_to = Tag.create(:name=>"how-to")
-tag_apache = Tag.create(:name=>"apache")
-tag_nutch = Tag.create(:name=>"nutch")
-tag_search_engines = Tag.create(:name=>"search engines")
-tag_web_crawlers = Tag.create(:name=>"web crawlers")
-tag_ruby = Tag.create(:name=>"ruby")
-tag_textmate = Tag.create(:name=>"textmate")
-tag_how_to = Tag.create(:name=>"how-to")
-tag_python = Tag.create(:name=>"python")
-tag_svn = Tag.create(:name=>"svn")
-tag_subversion = Tag.create(:name=>"subversion")
-tag_eclipse = Tag.create(:name=>"eclipse")
-tag_svn_properties = Tag.create(:name=>"svn properties")
+tag_samba = Tag.create!(:name=>"samba")
+tag_ubuntu = Tag.create!(:name=>"ubuntu")
+tag_linux = Tag.create!(:name=>"linux")
+tag_seo = Tag.create!(:name=>"seo")
+tag_drupal = Tag.create!(:name=>"drupal")
+tag_google = Tag.create!(:name=>"google")
+tag_twitter = Tag.create!(:name=>"twitter")
+tag_facebook = Tag.create!(:name=>"facebook")
+tag_programming = Tag.create!(:name=>"programming")
+tag_social_media = Tag.create!(:name=>"social media")
+tag_internet = Tag.create!(:name=>"internet")
+tag_windows = Tag.create!(:name=>"windows")
+tag_tips = Tag.create!(:name=>"tips")
+tag_how_to = Tag.create!(:name=>"how-to")
+tag_tips = Tag.create!(:name=>"tips")
+tag_c_ = Tag.create!(:name=>"c#")
+tag_gotchas = Tag.create!(:name=>"gotchas")
+tag__net = Tag.create!(:name=>".net")
+tag_how_to = Tag.create!(:name=>"how-to")
+tag_git = Tag.create!(:name=>"git")
+tag_github = Tag.create!(:name=>"github")
+tag_how_to = Tag.create!(:name=>"how-to")
+tag_php = Tag.create!(:name=>"php")
+tag_dom = Tag.create!(:name=>"dom")
+tag_xml = Tag.create!(:name=>"xml")
+tag_product_lines = Tag.create!(:name=>"product lines")
+tag_bug = Tag.create!(:name=>"bug")
+tag_testing = Tag.create!(:name=>"testing")
+tag_microsoft = Tag.create!(:name=>"microsoft")
+tag_freescale = Tag.create!(:name=>"freescale")
+tag_zune = Tag.create!(:name=>"zune")
+tag_ruby_on_rails = Tag.create!(:name=>"ruby on rails")
+tag_software_architecture = Tag.create!(:name=>"software architecture")
+tag_web_frameworks = Tag.create!(:name=>"web frameworks")
+tag_web_development = Tag.create!(:name=>"web development")
+tag_agile_frameworks = Tag.create!(:name=>"agile frameworks")
+tag_twitter = Tag.create!(:name=>"twitter")
+tag_unix = Tag.create!(:name=>"unix")
+tag_crontab = Tag.create!(:name=>"crontab")
+tag_git = Tag.create!(:name=>"git")
+tag_drupal = Tag.create!(:name=>"drupal")
+tag_drush = Tag.create!(:name=>"drush")
+tag_how_to = Tag.create!(:name=>"how-to")
+tag_software_engineering = Tag.create!(:name=>"software engineering")
+tag_reverse_engineering = Tag.create!(:name=>"reverse engineering")
+tag_gui = Tag.create!(:name=>"gui")
+tag_aspect_oriented_programming = Tag.create!(:name=>"aspect oriented programming")
+tag_aspectj = Tag.create!(:name=>"aspectj")
+tag_dynamic_analysis = Tag.create!(:name=>"dynamic analysis")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_wide_spectrum_language__wsl_ = Tag.create!(:name=>"wide spectrum language (wsl)")
+tag_unified_modelling_language__uml_ = Tag.create!(:name=>"unified modelling language (uml)")
+tag_reverse_engineering = Tag.create!(:name=>"reverse engineering")
+tag_cobol_legacy_systems = Tag.create!(:name=>"cobol legacy systems")
+tag_reengineering = Tag.create!(:name=>"reengineering")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_focused_crawling = Tag.create!(:name=>"focused crawling")
+tag_metadata_extraction = Tag.create!(:name=>"metadata extraction")
+tag_learning_object_management = Tag.create!(:name=>"learning object management")
+tag_ontology = Tag.create!(:name=>"ontology")
+tag_e_learning = Tag.create!(:name=>"e-learning")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_e_learning = Tag.create!(:name=>"e-learning")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_hypertext_generation = Tag.create!(:name=>"hypertext generation")
+tag_adaptation = Tag.create!(:name=>"adaptation")
+tag_personalisation = Tag.create!(:name=>"personalisation")
+tag_open_corpus_content = Tag.create!(:name=>"open corpus content")
+tag_metadata_generation = Tag.create!(:name=>"metadata generation")
+tag_e_learning = Tag.create!(:name=>"e-learning")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_e_learning = Tag.create!(:name=>"e-learning")
+tag_web_semantics = Tag.create!(:name=>"web semantics")
+tag_focused_crawling = Tag.create!(:name=>"focused crawling")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_social_bookmarking = Tag.create!(:name=>"social bookmarking")
+tag_e_learning = Tag.create!(:name=>"e-learning")
+tag_web_semantics = Tag.create!(:name=>"web semantics")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_e_learning = Tag.create!(:name=>"e-learning")
+tag_focused_crawling = Tag.create!(:name=>"focused crawling")
+tag_web_semantics = Tag.create!(:name=>"web semantics")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_e_learning = Tag.create!(:name=>"e-learning")
+tag_paper_review = Tag.create!(:name=>"paper review")
+tag_e_learning = Tag.create!(:name=>"e-learning")
+tag_drupal = Tag.create!(:name=>"drupal")
+tag_ms_access = Tag.create!(:name=>"ms access")
+tag_sql = Tag.create!(:name=>"sql")
+tag_visual_basic = Tag.create!(:name=>"visual basic")
+tag_macros = Tag.create!(:name=>"macros")
+tag_how_to = Tag.create!(:name=>"how-to")
+tag_drupal = Tag.create!(:name=>"drupal")
+tag_wysiwyg = Tag.create!(:name=>"wysiwyg")
+tag_imce = Tag.create!(:name=>"imce")
+tag_ckeditor = Tag.create!(:name=>"ckeditor")
+tag_git = Tag.create!(:name=>"git")
+tag_ftp = Tag.create!(:name=>"ftp")
+tag_web_development = Tag.create!(:name=>"web development")
+tag_drupal = Tag.create!(:name=>"drupal")
+tag_gitignore = Tag.create!(:name=>"gitignore")
+tag_c_ = Tag.create!(:name=>"c#")
+tag_csv = Tag.create!(:name=>"csv")
+tag_regex = Tag.create!(:name=>"regex")
+tag_java = Tag.create!(:name=>"java")
+tag_mac = Tag.create!(:name=>"mac")
+tag_how_to = Tag.create!(:name=>"how-to")
+tag_algorithms = Tag.create!(:name=>"algorithms")
+tag_runtime_analysis = Tag.create!(:name=>"runtime analysis")
+tag_analysis_of_algorithm = Tag.create!(:name=>"analysis of algorithm")
+tag_for_dummies = Tag.create!(:name=>"for dummies")
+tag_big_o = Tag.create!(:name=>"big-o")
+tag_concentration = Tag.create!(:name=>"concentration")
+tag_procrastination = Tag.create!(:name=>"procrastination")
+tag_attention = Tag.create!(:name=>"attention")
+tag_ssh = Tag.create!(:name=>"ssh")
+tag_ubuntu = Tag.create!(:name=>"ubuntu")
+tag_linux = Tag.create!(:name=>"linux")
+tag_cli = Tag.create!(:name=>"cli")
+tag_command_line = Tag.create!(:name=>"command line")
+tag_how_to = Tag.create!(:name=>"how-to")
+tag_apache = Tag.create!(:name=>"apache")
+tag_nutch = Tag.create!(:name=>"nutch")
+tag_search_engines = Tag.create!(:name=>"search engines")
+tag_web_crawlers = Tag.create!(:name=>"web crawlers")
+tag_ruby = Tag.create!(:name=>"ruby")
+tag_textmate = Tag.create!(:name=>"textmate")
+tag_how_to = Tag.create!(:name=>"how-to")
+tag_python = Tag.create!(:name=>"python")
+tag_svn = Tag.create!(:name=>"svn")
+tag_subversion = Tag.create!(:name=>"subversion")
+tag_eclipse = Tag.create!(:name=>"eclipse")
+tag_svn_properties = Tag.create!(:name=>"svn properties")
 
 # Posts
-p0 = adrian.posts.create(title: 'How to set up Samba in Ubuntu/Linux, and access it in Mac OS and Windows', content: '<p>Samba allows to share files and printers with other computers remotely, regardless their operating system (linux, windows, Mac, ...).&nbsp;This guide show how to intall and configure the Samba service in a Ubuntu machine and access it through windows and mac.</p>
+p0 = adrian.posts.create!(title: 'How to set up Samba in Ubuntu/Linux, and access it in Mac OS and Windows', content: '<p>Samba allows to share files and printers with other computers remotely, regardless their operating system (linux, windows, Mac, ...).&nbsp;This guide show how to intall and configure the Samba service in a Ubuntu machine and access it through windows and mac.</p>
 <p><strong><u>Setting up the Samba File Server on Ubuntu/Linux:</u></strong></p>
 <ol>
 	<li>Open the terminal</li>
@@ -234,7 +234,7 @@ tcp		445</pre>
 p0.tags << tag_samba
 p0.tags << tag_ubuntu
 p0.tags << tag_linux
-p1 = adrian.posts.create(title: 'Drupal Modules for SEO optimation', content: '<p>Search Engine Optimizations (SEO) could be quite challenging for beginners. It\'s overwhelming the amount of information that a webmaster need to understand in order to make his websites visible, in search engines like Google, Bing, Yahoo, ... Moreover most of this information is quite disperse. The idea here is to provided all the needed information in one place. Starting from steps for all websites and then focusing on Drupal SEO modules. &nbsp; <strong>General Steps:</strong></p>
+p1 = adrian.posts.create!(title: 'Drupal Modules for SEO optimation', content: '<p>Search Engine Optimizations (SEO) could be quite challenging for beginners. It\'s overwhelming the amount of information that a webmaster need to understand in order to make his websites visible, in search engines like Google, Bing, Yahoo, ... Moreover most of this information is quite disperse. The idea here is to provided all the needed information in one place. Starting from steps for all websites and then focusing on Drupal SEO modules. &nbsp; <strong>General Steps:</strong></p>
 <ol>
 	<li><strong>Sign up</strong>in the webmaster tools for the main search engines:
 		<ul>
@@ -258,7 +258,7 @@ p1 = adrian.posts.create(title: 'Drupal Modules for SEO optimation', content: '<
 ', created_at: '2011-07-12 21:32:33 -0400', updated_at: '2011-07-14 16:05:58 -0400' )
 p1.tags << tag_seo
 p1.tags << tag_drupal
-p2 = adrian.posts.create(title: 'What technologies are using the most influential Internet companies?', content: '<div>Google, Facebook, YouTube, Yahoo, Wikipedia, Hotmail (Windows Live), Twitter, LinkedIn, Amazon.com, WordPress.com, eBay, Bing... You may know probably all these companies; we use some on our daily basis. They bring services to around 2 billion people! And influence our lives everyday. The most influential Internet companies are in the search engine and social media category, so I will focus the analysis in these two. &nbsp;</div>
+p2 = adrian.posts.create!(title: 'What technologies are using the most influential Internet companies?', content: '<div>Google, Facebook, YouTube, Yahoo, Wikipedia, Hotmail (Windows Live), Twitter, LinkedIn, Amazon.com, WordPress.com, eBay, Bing... You may know probably all these companies; we use some on our daily basis. They bring services to around 2 billion people! And influence our lives everyday. The most influential Internet companies are in the search engine and social media category, so I will focus the analysis in these two. &nbsp;</div>
 <div>&nbsp;</div>
 <div><u><strong>Search Engines</strong></u></div>
 <ol>
@@ -409,7 +409,7 @@ p2.tags << tag_facebook
 p2.tags << tag_programming
 p2.tags << tag_social_media
 p2.tags << tag_internet
-p3 = adrian.posts.create(title: 'Faster Windows XP removing Msmpeng.Exe and other programs', content: '<p>At work, I use an Windows XP machine and it some times get really slowly. I noticed from the task manager (ctrl+shift+esc) that the process MsMpEng.exe is consuming most of my CPU time!</p>
+p3 = adrian.posts.create!(title: 'Faster Windows XP removing Msmpeng.Exe and other programs', content: '<p>At work, I use an Windows XP machine and it some times get really slowly. I noticed from the task manager (ctrl+shift+esc) that the process MsMpEng.exe is consuming most of my CPU time!</p>
 <p><strong>MsMpEng.exe</strong> is a process associated to <em>Windows Defender</em> that help you to "<em>protected</em>" the computer, but sometimes it requires too much resources. So, if eating up your available CPU it is better to disable it.</p>
 <p>Disable <strong>MsMpEng.exe</strong>:</p>
 <ol>
@@ -438,7 +438,7 @@ p3 = adrian.posts.create(title: 'Faster Windows XP removing Msmpeng.Exe and othe
 p3.tags << tag_windows
 p3.tags << tag_tips
 p3.tags << tag_how_to
-p4 = adrian.posts.create(title: 'C#\'s GetManifestResourceStream Gotcha', content: '<p>In the .NET framework, the method Assembly -&gt; Get Manifest Resource Stream has a gotcha that could take some time to figure out why is not working as intented. I was working in a piece of code (show below), and the GetManifestResourceStream always returned NULL exception error. Even though the file was there...</p>
+p4 = adrian.posts.create!(title: 'C#\'s GetManifestResourceStream Gotcha', content: '<p>In the .NET framework, the method Assembly -&gt; Get Manifest Resource Stream has a gotcha that could take some time to figure out why is not working as intented. I was working in a piece of code (show below), and the GetManifestResourceStream always returned NULL exception error. Even though the file was there...</p>
 <p>C# example:</p>
 <div>
 	<pre>public XmlTextReader GetSyntaxModeFile(SyntaxMode syntaxMode)
@@ -460,7 +460,7 @@ p4.tags << tag_c_
 p4.tags << tag_gotchas
 p4.tags << tag__net
 p4.tags << tag_how_to
-p5 = adrian.posts.create(title: 'How to set up Git / github in windows', content: '<p>Installing Git in Windows is not as straight forward as in a *nix machine like Linux and Mac. This guide help you to get started quickly.</p>
+p5 = adrian.posts.create!(title: 'How to set up Git / github in windows', content: '<p>Installing Git in Windows is not as straight forward as in a *nix machine like Linux and Mac. This guide help you to get started quickly.</p>
 <p>You will need the following tools:</p>
 <ul>
 	<li><strong>Putty</strong>: download <a href="http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip">latest version here</a>.</li>
@@ -485,7 +485,7 @@ p5 = adrian.posts.create(title: 'How to set up Git / github in windows', content
 p5.tags << tag_git
 p5.tags << tag_github
 p5.tags << tag_how_to
-p6 = adrian.posts.create(title: 'PHP DOM: explained and exemplified', content: '<p>This is guide to get started with PHP DOM or a quick reminder to those who have a little while since the last time they used it.&nbsp;The extended documentation is in&nbsp;<a href="http://www.php.net/manual/en/book.dom.php" onclick="window.open(this.href, \'\', \'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no\'); return false;" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; vertical-align: baseline; color: rgb(0, 116, 189); text-decoration: none; ">PHP.net</a>, but it is quite long. Here you might found a quick reference to get started in no time.</p>
+p6 = adrian.posts.create!(title: 'PHP DOM: explained and exemplified', content: '<p>This is guide to get started with PHP DOM or a quick reminder to those who have a little while since the last time they used it.&nbsp;The extended documentation is in&nbsp;<a href="http://www.php.net/manual/en/book.dom.php" onclick="window.open(this.href, \'\', \'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no\'); return false;" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; vertical-align: baseline; color: rgb(0, 116, 189); text-decoration: none; ">PHP.net</a>, but it is quite long. Here you might found a quick reference to get started in no time.</p>
 <p>Purpose of the DOM (Docuement Object Model): It is a convention used to represent and manipulate objects in XML, XHTML and HTML documents. Parsing XML and HTML files is very useful. It allows to manipulate RSS Feeds, interact with APIs and web services through XML (e.g. Google Maps, Facebook and Twitter APIs, etc.), extract information from websites (web crawling) and more.&nbsp;</p>
 <h2>Getting Started</h2>
 <p>The DOM implementation in PHP have more than 15 classes! But don\'t get afraid, for most cases, you might just end up using these ones: DOMNode, DOMDocument, DOMNodeList and DOMElement. In the following UML class diagram of PHP\'s DOM&nbsp;you will see how these classes are related to each other and them the explanation of each one.</p>
@@ -559,7 +559,7 @@ p6 = adrian.posts.create(title: 'PHP DOM: explained and exemplified', content: '
 p6.tags << tag_php
 p6.tags << tag_dom
 p6.tags << tag_xml
-p7 = adrian.posts.create(title: 'Microsoft Zune Failure Analysis', content: 'All the Zune 30 froze, precisely at 12:01 A.M. on December 31, 2008. These devices got stuck with an irresponsive Zune logo. This bug that didn’t allow users to use the device was cause by a bug in the internal clock driver that handled improperly the last day of a year leap. The Zune 30 model 2006 was the only one affected by this bug; all the other models keep working ok, such as the Zune: 80 and 120 GB with hard drive, and 4, 8, 16 GB with flash drive, because they did not have the component with the error.
+p7 = adrian.posts.create!(title: 'Microsoft Zune Failure Analysis', content: 'All the Zune 30 froze, precisely at 12:01 A.M. on December 31, 2008. These devices got stuck with an irresponsive Zune logo. This bug that didn’t allow users to use the device was cause by a bug in the internal clock driver that handled improperly the last day of a year leap. The Zune 30 model 2006 was the only one affected by this bug; all the other models keep working ok, such as the Zune: 80 and 120 GB with hard drive, and 4, 8, 16 GB with flash drive, because they did not have the component with the error.
 
 At the core of the Zune 30 music players, there is the Freescale iMX31L Multimedia processor and the MC13783 Power Management Chip. These components are also used in many other products like GPS, cellphones, pace makers, etc. Also the bug froze up the Toshiba Gigabeat S media players, since it was using the MC13783 chip. The driver written by Freescale for their MC13783 caused all of the problems in all the devices that were using it. The official solution from Microsoft to this bug was to let the Zune run out of battery completely, and reset it on January 1st. This bug was dissolved successfully by itself the first day of the 2009. 
 
@@ -592,7 +592,7 @@ p7.tags << tag_testing
 p7.tags << tag_microsoft
 p7.tags << tag_freescale
 p7.tags << tag_zune
-p8 = adrian.posts.create(title: 'Ruby on Rails Architectural Design', content: '<p>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduction</p>
+p8 = adrian.posts.create!(title: 'Ruby on Rails Architectural Design', content: '<p>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduction</p>
 <p>Ruby on Rails (RoR) is open source web framework written in the Ruby programming language, and all the applications in Rails are written in Ruby. Ruby on Rails is focused on productivity and enforces agile web development.</p>
 <p>Rails framework leverages the features of the Ruby language. Yukishiro Matzumoto designed this language in 1995 influence by Perl, Eiffel, Python, Smalltalk and others. It’s a dynamically typed, fully object-oriented, general-purpose scripting language. Ruby was designed to have an elegant syntax and made as human readable as possible, for instance it does not need colons and parenthesis around parameters. Some parts of the code are read like English declarations.</p>
 <p>The Ruby on Rails framework was designed for database-backed web applications. It was created as a response to heavy web frameworks such as J2EE and the .NET framework. In order to make the development process faster, Ruby on Rails uses conventions and assumptions that are considered best ways to accomplish tasks, and it’s designed to encourage those. This convention eliminates configuration code and increases productivity. Many of the common tasks for web development are built-in in the framework to work out-of-the-box. This includes email management, object-database mappers, file structures, code generation, how the elements are named and organized and so on. All of these conventions allow developers to write less code and develop agile applications. Additionally, the enhance maintainability and understandability around the Ruby on Rails developers’ community.</p>
@@ -702,7 +702,7 @@ p8.tags << tag_web_frameworks
 p8.tags << tag_web_development
 p8.tags << tag_agile_frameworks
 p8.tags << tag_twitter
-p9 = adrian.posts.create(title: 'Git auto-commit with Crontab', content: 'You might want to commit from a git repository from time to time for several purposes (backup, control version, continuous integration, etc). One way to accomplish that is using the CronTab (Cron is used to run periodic task in Unix-like systems).
+p9 = adrian.posts.create!(title: 'Git auto-commit with Crontab', content: 'You might want to commit from a git repository from time to time for several purposes (backup, control version, continuous integration, etc). One way to accomplish that is using the CronTab (Cron is used to run periodic task in Unix-like systems).
 
 Here is an example. 
 
@@ -736,7 +736,7 @@ p9.tags << tag_git
 p9.tags << tag_drupal
 p9.tags << tag_drush
 p9.tags << tag_how_to
-p10 = adrian.posts.create(title: 'Automated Reverse Engineering Java-Swing GUI - Paper Review', content: 'The extraction of Java-Swing GUI information using AspectJ seems like an way to do Reverse Engineering. The extracted information could be use later to migrate applications Java-Swing applications to the web, enhance program understating, generate UML diagrams and a myriad of other uses. This article will be summary of the paper about this topic [1].
+p10 = adrian.posts.create!(title: 'Automated Reverse Engineering Java-Swing GUI - Paper Review', content: 'The extraction of Java-Swing GUI information using AspectJ seems like an way to do Reverse Engineering. The extracted information could be use later to migrate applications Java-Swing applications to the web, enhance program understating, generate UML diagrams and a myriad of other uses. This article will be summary of the paper about this topic [1].
 
 The authors of the paper [1] are using aspect oriented programming (AOP) to intercept the application while is running and extract desired information. The information wanted in this case is the following ones: user events, windows and widgets. This type of reverse engineering is performed dynamically. The information is gathered while the user is using the application as usual. The more time the user use the application the more information is gathered. For this task, AspectJ is used. AspectJ is aspect-oriented extension created for Java programming language. AspectJ can interact with java-compiled code (bytecode) and it intercepts specific function calls.  For instance to extract windows and widget the aspect code will detect the Java-Swing calls of: “showFrame()”, “setVisible()”, “show()” in the JFrames, JPanels and widgets. In order to extract the user events, the aspect code intercepts the calls to “JTextField.setText()” for user input in text fields and so forth. Finally, all the information extracted is stored in XML and then can be used for different uses: migration of java-swing applications to web, generate UML design diagrams, you name it! 
 
@@ -751,7 +751,7 @@ p10.tags << tag_aspect_oriented_programming
 p10.tags << tag_aspectj
 p10.tags << tag_dynamic_analysis
 p10.tags << tag_paper_review
-p11 = adrian.posts.create(title: 'Determining granularity of independent tasks for reengineering a legacy system into an OO system - Paper Review', content: 'In this work [1] the authors explain the process of reengineering a legacy system in COBOL for object-oriented. Reengineering is a multi-step process to convert sequential and procedural-driven system into object-oriented and event-driven system. The proposed method [1] to accomplish this task is to transform the legacy system source code into an intermediary language: Wide Spectrum Language (WSL). The WSL code is used to apply an algorithm to identify the optimal granular unit for independent tasks taking into consideration factors as size, dependencies, and coupling. The detailed techniques used to determine the level of granularity are the following four: Determining Data and Control Dependencies (determine the dependency, if any, between data, variables, and controls), Program Block Identification (identify logical unit of execution of the legacy system), Individual Code line Evaluation (is the minimal granular unit of the legacy system: an code statement), and Procedure Granularity (is the largest self-contained granular units possible).
+p11 = adrian.posts.create!(title: 'Determining granularity of independent tasks for reengineering a legacy system into an OO system - Paper Review', content: 'In this work [1] the authors explain the process of reengineering a legacy system in COBOL for object-oriented. Reengineering is a multi-step process to convert sequential and procedural-driven system into object-oriented and event-driven system. The proposed method [1] to accomplish this task is to transform the legacy system source code into an intermediary language: Wide Spectrum Language (WSL). The WSL code is used to apply an algorithm to identify the optimal granular unit for independent tasks taking into consideration factors as size, dependencies, and coupling. The detailed techniques used to determine the level of granularity are the following four: Determining Data and Control Dependencies (determine the dependency, if any, between data, variables, and controls), Program Block Identification (identify logical unit of execution of the legacy system), Individual Code line Evaluation (is the minimal granular unit of the legacy system: an code statement), and Procedure Granularity (is the largest self-contained granular units possible).
 
 In my opinion, It’s a good idea to transform legacy system into an intermediary language. This way the process will be language independent. However, they should explain in more detail about the WSL intermediary language. And also, give more details in the transformation from COBOL to WSL and how it can be transform to OO systems. 
 
@@ -764,7 +764,7 @@ p11.tags << tag_unified_modelling_language__uml_
 p11.tags << tag_reverse_engineering
 p11.tags << tag_cobol_legacy_systems
 p11.tags << tag_reengineering
-p12 = adrian.posts.create(title: 'On line Course Organization - Paper Review', content: '<p>This paper [1] proposed a specialized search engine, called Fusion, which index meta-information about available courses. Google can be used to perform this search, but the result will be too broad. Fusion provides specialized results only. In order to accomplish this task, Fusion used the web crawler Nutch, which is used to extract the content of courses. The crawler does real-time decisions to parse and store only the necessary data instead of the whole content. The extraction of the metadata is done using the following technologies: NekoHTML (HTML document parser), Xalan (XSLT for transforming XML to HTML), XPath (used to navigate through elements in the XML). After all the course metadata is extracted, the information is classified according to the IEEE-LTSC LOM (Learning Object Metadata). Finally all the data is stored and used for the web portal.</p>
+p12 = adrian.posts.create!(title: 'On line Course Organization - Paper Review', content: '<p>This paper [1] proposed a specialized search engine, called Fusion, which index meta-information about available courses. Google can be used to perform this search, but the result will be too broad. Fusion provides specialized results only. In order to accomplish this task, Fusion used the web crawler Nutch, which is used to extract the content of courses. The crawler does real-time decisions to parse and store only the necessary data instead of the whole content. The extraction of the metadata is done using the following technologies: NekoHTML (HTML document parser), Xalan (XSLT for transforming XML to HTML), XPath (used to navigate through elements in the XML). After all the course metadata is extracted, the information is classified according to the IEEE-LTSC LOM (Learning Object Metadata). Finally all the data is stored and used for the web portal.</p>
 <div><img alt="architecture online course crawler" src="http://www.adrianmejiarosario.com/sites/default/files/pictures/architecture-online-course-crawler.png" style="width: 500px; height: 236px; "></div>
 <div style="text-align: left; ">Source: [1]</div>
 <div style="text-align: right; ">&nbsp;</div>
@@ -810,7 +810,7 @@ p12.tags << tag_metadata_extraction
 p12.tags << tag_learning_object_management
 p12.tags << tag_ontology
 p12.tags << tag_e_learning
-p13 = adrian.posts.create(title: 'E-Learning on the Social Semantic Information Sources - Paper Review', content: '<p>The paper [1] is proposing a social bookmarking system called Social Semantic Collaborative Filtering (SSCF). It presents how digital libraries can be combined with social semantic information sources and it exemplifies how these techniques can improve e-Learning. The goal of the SSCF is to enhance individual bookmarks with shared knowledge of the community. The Fig. 1 shows the dificulty (or time-consumptions) of bookmarking all the interested links and then share all of them in a blog for other users.</p>
+p13 = adrian.posts.create!(title: 'E-Learning on the Social Semantic Information Sources - Paper Review', content: '<p>The paper [1] is proposing a social bookmarking system called Social Semantic Collaborative Filtering (SSCF). It presents how digital libraries can be combined with social semantic information sources and it exemplifies how these techniques can improve e-Learning. The goal of the SSCF is to enhance individual bookmarks with shared knowledge of the community. The Fig. 1 shows the dificulty (or time-consumptions) of bookmarking all the interested links and then share all of them in a blog for other users.</p>
 <p><img alt="Use Case Scenario for SSCF" src="http://www.adrianmejiarosario.com/sites/default/files/pictures/Screen%20shot%202011-09-21%20at%201.24.35%20PM.png" style="width: 600px; height: 222px; "></p>
 <p>Source: [1]</p>
 <p>In order to solve this problem, they [1] proposed a SSCF bookmarking system, which is based on JeremeDL. This platform joins 3 separated applications: blog, Digital Library, and bookmarking application (Fig. 3), to solve the problems above-mentioned.</p>
@@ -848,7 +848,7 @@ p13 = adrian.posts.create(title: 'E-Learning on the Social Semantic Information 
 ', created_at: '2011-09-21 11:50:27 -0400', updated_at: '2011-09-21 14:21:22 -0400' )
 p13.tags << tag_paper_review
 p13.tags << tag_e_learning
-p14 = adrian.posts.create(title: 'Dynamic Hypertext Generation for Reusing Open Corpus Content - Paper Review', content: 'B. Steichen, S. Lawless, V. Wade et al. (2009) [1] proposed an Adaptive Hypermedia (AH) for dynamic hypertext generation of learning content. This system provides personalized learning services, which aims to enrich the learning process and the satisfaction of the learners. In order to accomplish these tasks: the system perform open courses harvesting and identification, generate dynamically hyperlinks based on the learner experience and appropriated learning strategies, and present the content in a uniform presentation across heterogeneous content. National digital content repositories cross institution sharing of learning resources and universities open courseware seed the identification task. Web crawlers are used to harvest the open corpus. Focused crawlers, such as Nalanda and Combine are mentioned and Heritix is recommended.  The harvested data is later indexed to make it more discoverable with open sources solutions, such as Nutch and Swish-e and then retrieve using search engines like Lucene and Lemur. For the metadata classification there are 3 approaches: (i) extraction of the metadata from files that already have it; (ii) infer and generate metadata automatically. Semtag from IBM perform can do this using a Taxonomy Based Disambiguation (TBD) algorithm. Also Klarity and DC.dot are metadata generators. (iii) Use of social bookmarking (digg, flickr, facebook,…) to extract the metadata/content description. For the dynamic hypertext generation a system was develop on top of the Adaptive Personalized eLearning Service (APeLS). This facilitates students to learn about specific concepts using query of keywords. In [2] can found be found also the results of this system.
+p14 = adrian.posts.create!(title: 'Dynamic Hypertext Generation for Reusing Open Corpus Content - Paper Review', content: 'B. Steichen, S. Lawless, V. Wade et al. (2009) [1] proposed an Adaptive Hypermedia (AH) for dynamic hypertext generation of learning content. This system provides personalized learning services, which aims to enrich the learning process and the satisfaction of the learners. In order to accomplish these tasks: the system perform open courses harvesting and identification, generate dynamically hyperlinks based on the learner experience and appropriated learning strategies, and present the content in a uniform presentation across heterogeneous content. National digital content repositories cross institution sharing of learning resources and universities open courseware seed the identification task. Web crawlers are used to harvest the open corpus. Focused crawlers, such as Nalanda and Combine are mentioned and Heritix is recommended.  The harvested data is later indexed to make it more discoverable with open sources solutions, such as Nutch and Swish-e and then retrieve using search engines like Lucene and Lemur. For the metadata classification there are 3 approaches: (i) extraction of the metadata from files that already have it; (ii) infer and generate metadata automatically. Semtag from IBM perform can do this using a Taxonomy Based Disambiguation (TBD) algorithm. Also Klarity and DC.dot are metadata generators. (iii) Use of social bookmarking (digg, flickr, facebook,…) to extract the metadata/content description. For the dynamic hypertext generation a system was develop on top of the Adaptive Personalized eLearning Service (APeLS). This facilitates students to learn about specific concepts using query of keywords. In [2] can found be found also the results of this system.
 
 [1] Steichen, B., Lawless, S., O’Connor, A., & Wade, V. (2009). Dynamic Hypertext Generation for Reusing Open Corpus Content. HT’09, June 29–July 1, 2009, Torino, Italy, 119-128. ACM. 
 ', created_at: '2011-09-22 12:14:06 -0400', updated_at: '2011-10-04 15:52:28 -0400' )
@@ -859,7 +859,7 @@ p14.tags << tag_personalisation
 p14.tags << tag_open_corpus_content
 p14.tags << tag_metadata_generation
 p14.tags << tag_e_learning
-p15 = adrian.posts.create(title: 'OCCS: Enabling the Dynamic Discovery, Harvesting and Delivery of Educational Content from Open Corpus Sources - Paper Review', content: 'S. Lawless, V. Wade et al. (2008) [1] introduces the Open Corpus Content Service (OCCS), which is a system to discover, harvest, classify and index educational content from the Internet. It aims to provide a dynamic learning object generation based on the background of the learner. The OCCS employs Heritrix (open source, web-scale, archival web crawler) for discovery educational content available in the WWW. Heritrix uses languages guessers (JTCL) and text classifier (Rainbow) to classify the extracted data. All the content is indexed in ARC files with NutchWAX and Hadoop. Finally the data is presented to the users using WERA (WEb aRchive Access). Additionally, the OCCS system is evaluated using a specific topic and the results are shown in [1].
+p15 = adrian.posts.create!(title: 'OCCS: Enabling the Dynamic Discovery, Harvesting and Delivery of Educational Content from Open Corpus Sources - Paper Review', content: 'S. Lawless, V. Wade et al. (2008) [1] introduces the Open Corpus Content Service (OCCS), which is a system to discover, harvest, classify and index educational content from the Internet. It aims to provide a dynamic learning object generation based on the background of the learner. The OCCS employs Heritrix (open source, web-scale, archival web crawler) for discovery educational content available in the WWW. Heritrix uses languages guessers (JTCL) and text classifier (Rainbow) to classify the extracted data. All the content is indexed in ARC files with NutchWAX and Hadoop. Finally the data is presented to the users using WERA (WEb aRchive Access). Additionally, the OCCS system is evaluated using a specific topic and the results are shown in [1].
 
 Something that I like about this paper is that it mentions most of the tool used to implement the OCCS in all this stages. All these tools can be used by the reader to implement similar projects.
 
@@ -874,7 +874,7 @@ p15.tags << tag_paper_review
 p15.tags << tag_e_learning
 p15.tags << tag_web_semantics
 p15.tags << tag_focused_crawling
-p16 = adrian.posts.create(title: 'eLearning 2.0 and Social, Practice-Oriented Communities to Improve Knowledge in Companies - Paper Review', content: 'S. R. Kruk et al. (2007) [1] implemented a social bookmarking system called Social Semantic Collaborative Filtering (SSCF). The goal of the SSCF is to enhance individual bookmarks with shared knowledge of the community. It also presents how digital libraries can be combined with social semantic information sources and it exemplifies how these techniques can improve e-Learning. Digital Libraries and other open courses can leverage their potential with the collaborative architectures. Learners can use it to exchange information, and express and synthetize knowledge e-Learning environments. It also makes use of the social bookmarking, web semantics and ontology services in other to organize and classify knowledge.
+p16 = adrian.posts.create!(title: 'eLearning 2.0 and Social, Practice-Oriented Communities to Improve Knowledge in Companies - Paper Review', content: 'S. R. Kruk et al. (2007) [1] implemented a social bookmarking system called Social Semantic Collaborative Filtering (SSCF). The goal of the SSCF is to enhance individual bookmarks with shared knowledge of the community. It also presents how digital libraries can be combined with social semantic information sources and it exemplifies how these techniques can improve e-Learning. Digital Libraries and other open courses can leverage their potential with the collaborative architectures. Learners can use it to exchange information, and express and synthetize knowledge e-Learning environments. It also makes use of the social bookmarking, web semantics and ontology services in other to organize and classify knowledge.
 
 About this paper, I like the how it states the benefits of this e-Learning systems for companies and institutions and also the benefits web collaboration to boost learning.  Additionally, the idea of using social bookmarking to classify educational content is pretty interesting.
 
@@ -884,7 +884,7 @@ p16.tags << tag_paper_review
 p16.tags << tag_social_bookmarking
 p16.tags << tag_e_learning
 p16.tags << tag_web_semantics
-p17 = adrian.posts.create(title: 'Focused Crawling for Automatic Service Discovery, Annotation, and Classification in Industrial Digital Ecosystems - Paper Review', content: 'H. Dong et al. (2011) [1] introduce an approach to enhance disperse and heterogeneous industrial digital ecosystem for e-Learning. Its target is to discover and classify the industrial information automatically using focused crawlers. The focused crawler perform 5 operations: webpage fetcher (multithreading web crawling given a URL list), policy center  (fetching boundaries, max. depth, multithreading priority), webpage pool (store data as plain text), webpage parser (use heuristics rules on website layouts to extract desired data), service metadata generator (produce metadata and in ontology markup language), and service metadata classifier (used structured domains of knowledge to classify the data). [4] also explain in detail the Ontology Markup Language (OML) and perform several test and performance measures, such as harvest rate, precision, recall, harmony, f-measure, fallout rate, and more.
+p17 = adrian.posts.create!(title: 'Focused Crawling for Automatic Service Discovery, Annotation, and Classification in Industrial Digital Ecosystems - Paper Review', content: 'H. Dong et al. (2011) [1] introduce an approach to enhance disperse and heterogeneous industrial digital ecosystem for e-Learning. Its target is to discover and classify the industrial information automatically using focused crawlers. The focused crawler perform 5 operations: webpage fetcher (multithreading web crawling given a URL list), policy center  (fetching boundaries, max. depth, multithreading priority), webpage pool (store data as plain text), webpage parser (use heuristics rules on website layouts to extract desired data), service metadata generator (produce metadata and in ontology markup language), and service metadata classifier (used structured domains of knowledge to classify the data). [4] also explain in detail the Ontology Markup Language (OML) and perform several test and performance measures, such as harvest rate, precision, recall, harmony, f-measure, fallout rate, and more.
 
 This paper provides a detailed methodology to perform focused web crawling of educational content. It also provides great details about the classification of the content using web semantics and ontology services. Examples of Web Ontology Language (OWL) are shown. Another thing that I like is the amount of metrics they have to measure the performance of the system. However, this project doesn\'t explain how the user is going to interact with the recollected data and the presentation layer.
 
@@ -893,21 +893,21 @@ p17.tags << tag_paper_review
 p17.tags << tag_e_learning
 p17.tags << tag_focused_crawling
 p17.tags << tag_web_semantics
-p18 = adrian.posts.create(title: 'Integration of Visualization Techniques and Completion Strategy to Improve Learning in Computer Programming', content: 'The advantages of different presentation media are explored in the work of N. Hashim and S. Salam in “Integration of Visualization Techniques and Completion Strategy to Improve Learning in Computer Programming” [1]. They compare the advantages of Mobile-based training (MBT) over Web-based training (WBT) for learning computer programming. Additionally, they explain some features that aid the learning process, such as visualization techniques and completion strategy. Visualization techniques refers to the use of static (images and text) and dynamic (animation, voice and videos) presentation. Completion strategy is an assessment technique in which the learner have to prove their knowledge gained. This is done by filling blanks of incomplete code snippets, rewrite programs to improve performance, and so forth. 
+p18 = adrian.posts.create!(title: 'Integration of Visualization Techniques and Completion Strategy to Improve Learning in Computer Programming', content: 'The advantages of different presentation media are explored in the work of N. Hashim and S. Salam in “Integration of Visualization Techniques and Completion Strategy to Improve Learning in Computer Programming” [1]. They compare the advantages of Mobile-based training (MBT) over Web-based training (WBT) for learning computer programming. Additionally, they explain some features that aid the learning process, such as visualization techniques and completion strategy. Visualization techniques refers to the use of static (images and text) and dynamic (animation, voice and videos) presentation. Completion strategy is an assessment technique in which the learner have to prove their knowledge gained. This is done by filling blanks of incomplete code snippets, rewrite programs to improve performance, and so forth. 
 
 Reference
 [1] N. Hashim and S. Salam, “Integration of Visualization Techniques and Completion Strategy to Improve Learning in Computer Programming,” 2009 IEEE International Conference of Soft Computing and Pattern Recognition, pp. 665-669, 2009.
 ', created_at: '2011-10-26 12:52:02 -0400', updated_at: '2011-10-26 12:52:02 -0400' )
 p18.tags << tag_paper_review
 p18.tags << tag_e_learning
-p19 = adrian.posts.create(title: 'An Approach to Annotation of Learning Texts on Programming within a Web-Based Educational System - Paper Review', content: 'V. Mihál and M. Bieliková presents “An Approach to Annotation of Learning Texts on Programming within a Web-Based Educational System”. This work leverage the usage of annotation to enhance programming learning experience. Annotations provide to learners supplementary information that they otherwise will have to find by themselves somewhere else.  They describe different types of annotation: manual and automatic. For the manual annotations the user the user provides insert related notes to material. Automatic annotation are done without human intervention. It uses ontologies and language processing to identify related content and insert it in the appropriated place. 
+p19 = adrian.posts.create!(title: 'An Approach to Annotation of Learning Texts on Programming within a Web-Based Educational System - Paper Review', content: 'V. Mihál and M. Bieliková presents “An Approach to Annotation of Learning Texts on Programming within a Web-Based Educational System”. This work leverage the usage of annotation to enhance programming learning experience. Annotations provide to learners supplementary information that they otherwise will have to find by themselves somewhere else.  They describe different types of annotation: manual and automatic. For the manual annotations the user the user provides insert related notes to material. Automatic annotation are done without human intervention. It uses ontologies and language processing to identify related content and insert it in the appropriated place. 
 
 Reference
 V. Mihál and M. Bieliková, “An Approach to Annotation of Learning Texts on Programming within a Web-Based Educational System,” 2009 IEEE Fourth International Workshop on Semantic Media Adaptation and Personalization, pp. 99-104, 2009.
 ', created_at: '2011-10-26 13:26:15 -0400', updated_at: '2011-10-26 13:26:15 -0400' )
 p19.tags << tag_paper_review
 p19.tags << tag_e_learning
-p20 = adrian.posts.create(title: 'Update Drupal sites', content: 'The better way to learn is by a concrete example. I update a site called "heyshuga" from Drupal 7.8 to 7.9. Here are the steps
+p20 = adrian.posts.create!(title: 'Update Drupal sites', content: 'The better way to learn is by a concrete example. I update a site called "heyshuga" from Drupal 7.8 to 7.9. Here are the steps
 
 1. Download the latest version of drupal
 
@@ -931,7 +931,7 @@ www.yousite.com/update.php
 
 ', created_at: '2011-11-04 02:04:24 -0400', updated_at: '2012-01-25 23:38:08 -0500' )
 p20.tags << tag_drupal
-p21 = adrian.posts.create(title: 'How to execute SQL statements on MS Access?', content: 'Sometimes is quicker to use SQL statements than create tables using the MS Access Visual Designer. For instance, if you already have the SQL code from other databases this could be useful.
+p21 = adrian.posts.create!(title: 'How to execute SQL statements on MS Access?', content: 'Sometimes is quicker to use SQL statements than create tables using the MS Access Visual Designer. For instance, if you already have the SQL code from other databases this could be useful.
 
 Here are the steps of how to create a new table programmatically in Access (2007):
 
@@ -965,7 +965,7 @@ p21.tags << tag_sql
 p21.tags << tag_visual_basic
 p21.tags << tag_macros
 p21.tags << tag_how_to
-p22 = adrian.posts.create(title: 'How to setup Drupal WYSIWYG and Images uploading?', content: '<p>It have been a pain for me to upload images and deal with tons of WYSIWYG editors... After many trials in this post I recompiled my experiences and the best method that I have found so far. If you have any suggestion I&#39;m willing to hear it, too.</p>
+p22 = adrian.posts.create!(title: 'How to setup Drupal WYSIWYG and Images uploading?', content: '<p>It have been a pain for me to upload images and deal with tons of WYSIWYG editors... After many trials in this post I recompiled my experiences and the best method that I have found so far. If you have any suggestion I&#39;m willing to hear it, too.</p>
 <div>
 	<strong>1. Install and enable the following modules:</strong></div>
 <div>
@@ -1059,7 +1059,7 @@ p22.tags << tag_drupal
 p22.tags << tag_wysiwyg
 p22.tags << tag_imce
 p22.tags << tag_ckeditor
-p23 = adrian.posts.create(title: 'git+ftp: Publish Git repository over FTP ', content: '<p>I have been working with websites for a while and also with different web hosts. The default way to upload content is through FTP but it takes a lot of time because upload the entire site each time. Some web hosts &nbsp;have ssh and git, which is great for deployement because you can keep track of the versions and also upload only the files that changes.</p>
+p23 = adrian.posts.create!(title: 'git+ftp: Publish Git repository over FTP ', content: '<p>I have been working with websites for a while and also with different web hosts. The default way to upload content is through FTP but it takes a lot of time because upload the entire site each time. Some web hosts &nbsp;have ssh and git, which is great for deployement because you can keep track of the versions and also upload only the files that changes.</p>
 <div>
 	&nbsp;</div>
 <div>
@@ -1114,7 +1114,7 @@ p23.tags << tag_ftp
 p23.tags << tag_web_development
 p23.tags << tag_drupal
 p23.tags << tag_gitignore
-p24 = adrian.posts.create(title: 'Regular Expressions in C# and Java - CSV Example', content: '<p>Regular expressions are used to find matches in texts. The following is a real application of Regex in C# and Java.&nbsp;</p>
+p24 = adrian.posts.create!(title: 'Regular Expressions in C# and Java - CSV Example', content: '<p>Regular expressions are used to find matches in texts. The following is a real application of Regex in C# and Java.&nbsp;</p>
 <div>
 	<div>
 		CSV are files that all the data is separated by a comma. E.g:</div>
@@ -1205,7 +1205,7 @@ p24.tags << tag_c_
 p24.tags << tag_csv
 p24.tags << tag_regex
 p24.tags << tag_java
-p25 = adrian.posts.create(title: 'How to remove programs from the start up in Mac OS X', content: '<p>Well... I have done this so many times in Windows (it&#39;s just executing &quot;msconfig&quot; you can edit the startup items).&nbsp;Today, I had the need to do the same in the Mac OS X Lion.</p>
+p25 = adrian.posts.create!(title: 'How to remove programs from the start up in Mac OS X', content: '<p>Well... I have done this so many times in Windows (it&#39;s just executing &quot;msconfig&quot; you can edit the startup items).&nbsp;Today, I had the need to do the same in the Mac OS X Lion.</p>
 <p>Here is how to do it</p>
 <ol>
 	<li>
@@ -1220,7 +1220,7 @@ p25 = adrian.posts.create(title: 'How to remove programs from the start up in Ma
 ', created_at: '2011-11-18 12:18:23 -0500', updated_at: '2011-11-18 13:04:48 -0500' )
 p25.tags << tag_mac
 p25.tags << tag_how_to
-p26 = adrian.posts.create(title: 'Learning Algorithms from Scratch / Algorithms for Dummies', content: '<p>When you are programming you face challenges all the way. Getting the problems solved is just the tip of the iceberg, getting it done efficiently is the rest.</p>
+p26 = adrian.posts.create!(title: 'Learning Algorithms from Scratch / Algorithms for Dummies', content: '<p>When you are programming you face challenges all the way. Getting the problems solved is just the tip of the iceberg, getting it done efficiently is the rest.</p>
 <p class="p1"><b>Why should you care for efficiency?</b></p>
 <p class="p1">Solutions to the same problem might take years with certain algorithm, and just minutes using efficient algorithms. For instance, if you have applications that are used for thousands of people over internet, every fraction of second counts. Therefore, efficient algorithms is a must.</p>
 <p class="p1"><b>How I do my algorithms more efficient?</b></p>
@@ -1276,7 +1276,7 @@ p26.tags << tag_runtime_analysis
 p26.tags << tag_analysis_of_algorithm
 p26.tags << tag_for_dummies
 p26.tags << tag_big_o
-p27 = adrian.posts.create(title: 'Concentration problems? Procastination? You\'re not the only one.', content: '<p>&nbsp;</p>
+p27 = adrian.posts.create!(title: 'Concentration problems? Procastination? You\'re not the only one.', content: '<p>&nbsp;</p>
 <p>Procastination and concentration problems are big deals from a lot of people, specially for students. There are too many distractions that are more fun than our homework.</p>
 <p>I read an interesting&nbsp;<a href="http://altmedicine.about.com/od/optimumhealthessentials/a/Concentration.htm">article about concentration</a>&nbsp;that I&#39;d like to share a summary with my own notes:</p>
 <p>There is no substitute for paying attention... here are Five tips to improve your attention/concentration/focus/productivity:</p>
@@ -1342,7 +1342,7 @@ p27 = adrian.posts.create(title: 'Concentration problems? Procastination? You\'r
 p27.tags << tag_concentration
 p27.tags << tag_procrastination
 p27.tags << tag_attention
-p28 = adrian.posts.create(title: 'SSH login without password', content: '<p>If you want to login to a remote server using SSH and don&#39;t have to type the password again and again, here is a little trick</p>
+p28 = adrian.posts.create!(title: 'SSH login without password', content: '<p>If you want to login to a remote server using SSH and don&#39;t have to type the password again and again, here is a little trick</p>
 <p>$&nbsp;cat ~/.ssh/id_rsa.pub | ssh &lt;user&gt;@&lt;server.domain&gt; &#39;cat &gt;&gt; .ssh/authorized_keys&#39;</p>
 <p>After you run this and enter your password (for the last time), you can login to your server just typing:</p>
 <p>$ ssh &lt;user&gt;@&lt;server.domain&gt;</p>
@@ -1353,7 +1353,7 @@ p28.tags << tag_ubuntu
 p28.tags << tag_linux
 p28.tags << tag_cli
 p28.tags << tag_command_line
-p29 = adrian.posts.create(title: 'Get Started with the web crawler Apache Nutch 1.x ', content: '<p>Apache Nutch is an open source <strong>scalable</strong> Web crawler written in Java and based on Lucene/Solr for the indexing and search part.&nbsp;It has a highly modular architecture, allowing developers to create plug-ins for media-type parsing, data retrieval, querying and clustering. [<a href="http://en.wikipedia.org/wiki/Nutch">*</a>]</p>
+p29 = adrian.posts.create!(title: 'Get Started with the web crawler Apache Nutch 1.x ', content: '<p>Apache Nutch is an open source <strong>scalable</strong> Web crawler written in Java and based on Lucene/Solr for the indexing and search part.&nbsp;It has a highly modular architecture, allowing developers to create plug-ins for media-type parsing, data retrieval, querying and clustering. [<a href="http://en.wikipedia.org/wiki/Nutch">*</a>]</p>
 <div>
 	<u><strong>Motivation</strong></u></div>
 <div>
@@ -1563,7 +1563,7 @@ p29.tags << tag_apache
 p29.tags << tag_nutch
 p29.tags << tag_search_engines
 p29.tags << tag_web_crawlers
-p30 = adrian.posts.create(title: 'How do I change the Ruby/Python version Textmate uses?', content: '<p>&nbsp;</p>
+p30 = adrian.posts.create!(title: 'How do I change the Ruby/Python version Textmate uses?', content: '<p>&nbsp;</p>
 <p>I&#39;m using textMate to develop ruby code. It&#39;s very handy because I can run it just pressing (cmd-R). But by default it&#39;s running ruby 1.8.7 and I want 1.9.2 version.</p>
 <p>This is the steps to change it:</p>
 <p>Find the right path with</p>
@@ -1587,7 +1587,7 @@ p30.tags << tag_ruby
 p30.tags << tag_textmate
 p30.tags << tag_how_to
 p30.tags << tag_python
-p31 = adrian.posts.create(title: 'Adding Subversion (SVN) Properties to your code', content: '<p>When you are coding in a team enviroment it&#39;s good to have the subversion properties in your files, that way any other developer can see quickly who made the last changes and when.</p>
+p31 = adrian.posts.create!(title: 'Adding Subversion (SVN) Properties to your code', content: '<p>When you are coding in a team enviroment it&#39;s good to have the subversion properties in your files, that way any other developer can see quickly who made the last changes and when.</p>
 <p>You can add the following lines at the bottom of your code:</p>
 <div>
 	//-----------------------------------------------------------------------------</div>
