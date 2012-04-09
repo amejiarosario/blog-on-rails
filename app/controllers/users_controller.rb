@@ -1,4 +1,8 @@
+include ApplicationHelper
+
 class UsersController < ApplicationController
+  before_filter :require_login # I'm the only one that should add new users for now.
+  
   @title = "User"
   
   # GET /users

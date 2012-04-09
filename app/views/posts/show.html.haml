@@ -5,7 +5,8 @@
 	%div.pull-right=raw "#{link_to 'edit', edit_post_path(@post)} | #{link_to 'delete', @post, :confirm => 'Are you sure?', :method => :delete}"
 
 %h2= @post.title
-%p.details=raw "by #{link_to "#{@post.user.name}", @post.user} in #{l @post.created_at, format: :post}"
+-# by #{link_to "#{@post.user.name}", @post.user} in
+%p.details=raw "#{l @post.created_at, format: :post}"
 %p=raw @post.content
 %b.tags Tags: 
 =raw post_tags(@post)
