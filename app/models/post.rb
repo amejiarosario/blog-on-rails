@@ -1,4 +1,8 @@
 class Post < ActiveRecord::Base
+  def to_param
+    "#{id} #{title}".parameterize
+  end
+  
   #validates :name, :presence => true
   validates :title, :presence => true, :length => { :minimum => 2}
 
@@ -8,5 +12,4 @@ class Post < ActiveRecord::Base
   
   accepts_nested_attributes_for :tags, allow_destroy: :true, 
     reject_if: proc{ |attrs| attrs.all?{|k,v| v.blank? } }
-    
 end
