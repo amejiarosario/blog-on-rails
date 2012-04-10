@@ -6,9 +6,8 @@ def validate(html)
   html = html.gsub("'","\\\\'")
 end
 
-def tag_var (tag)
+def tag_var_name (tag)
   "tag_"+tag.gsub(/[^a-zA-Z0-9]/,"_")
-  #tag.gsub("-","_").gsub(/\s+/,"_").gsub('#',"_").gsub('.',"_").gsub('(',"_")
 end
 
 tags_set = Set.new
@@ -28,11 +27,12 @@ File.open('output_seed.rb','w') do |f|
     ")\n"
     
     p['tags'].split(/\s?,\s?/).each do |t|
-      t = t.gsub(/\s+/," ").downcase
-      tvar = tag_var(t)
+      t = t.gsub(/\s+/," ").downcase.strip #remove extra spaces
+      tvar = tag_var_name(t)
+      
       posts += "p#{i}.tags << #{tvar}\n"
       tags += "#{tvar} = Tag.create(:name=>\"#{t}\")\n" unless tags_set.include? tvar
-      tags_set.add(t)
+      tags_set.add(tvar)
     end
   end
   f.write "# Tags\n"

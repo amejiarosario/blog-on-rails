@@ -8,9 +8,10 @@ gem 'rails', '3.2.1'
 # My Gems
 gem 'haml'
 gem 'haml-rails'
-gem 'gravatar_image_tag'
-gem 'tinymce-rails'
-gem 'friendly_id'
+gem 'gravatar_image_tag' # gravatar
+gem 'tinymce-rails' #wysiwyg
+gem 'friendly_id' #pretty url
+gem 'sitemap'
 
 group :development, :test do
   gem 'rspec-rails'
