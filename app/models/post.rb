@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
-  def to_param
-    "#{id} #{title}".parameterize
-  end
+  extend FriendlyId
+  
+  friendly_id :title, use: [:slugged, :history]
   
   #validates :name, :presence => true
   validates :title, :presence => true, :length => { :minimum => 2}

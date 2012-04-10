@@ -10,6 +10,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'gravatar_image_tag'
 gem 'tinymce-rails'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'rspec-rails'
