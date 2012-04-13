@@ -28,6 +28,10 @@ footer {
 	min-height:300px;
 }
 
+h1 {
+	padding-bottom:0.5em;
+}
+
 /*
 .container{
 	width:710px;

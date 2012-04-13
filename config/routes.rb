@@ -21,7 +21,10 @@ Blog::Application.routes.draw do
   match '/register', :to => 'users#new'
   match '/login', :to => 'sessions#new'
   match '/logout', :to => 'sessions#destroy'
-  match '/contact', :to => 'contact#new'
+  match '/contactme', :to => 'contacts#new'
+  match '/about', :to => 'about#index'
+  match '/portfolio', :to => 'portfolio#index'
+  match '/blog', :to => 'posts#index'
   
  
 

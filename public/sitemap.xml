@@ -169,7 +169,12 @@
   </url>
   <url>
     <loc>http://adrianmejia.com/posts/adding-subversion-svn-properties-to-your-code</loc>
-    <lastmod>2012-02-11</lastmod>
+    <lastmod>2012-04-13</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>http://adrianmejia.com/posts/never-updated</loc>
+    <lastmod>2012-04-13</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -550,5 +555,13 @@
   <url>
     <loc>http://adrianmejia.com/tags/svn-properties</loc>
     <lastmod>2012-04-10</lastmod>
+  </url>
+  <url>
+    <loc>http://adrianmejia.com/tags/control-version</loc>
+    <lastmod>2012-04-13</lastmod>
+  </url>
+  <url>
+    <loc>http://adrianmejia.com/tags/test</loc>
+    <lastmod>2012-04-13</lastmod>
   </url>
 </urlset>
