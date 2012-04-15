@@ -10,7 +10,7 @@
 		= f.label :title
 		= f.text_field :title
 	.field
-		= tinymce :theme => "advanced"
+		= tinymce :theme => "advanced", plugins: "uploadimage"
 		= f.label :content
 		= f.text_area :content, class: "tinymce", style: "width: 100%; height: 40%;"
 	%h2 Tags:

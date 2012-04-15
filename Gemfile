@@ -12,7 +12,18 @@ gem 'gravatar_image_tag' # gravatar
 gem 'tinymce-rails' #wysiwyg
 gem 'friendly_id' #pretty url
 gem 'sitemap'
+gem 'tinymce-rails-imageupload', '~> 3.4.8'
+=begin
+gem 'spree_editor', :git => 'git://raw.github.com/spree/spree_editor.git'
 
+Bundler could not find compatible versions for gem "jquery-rails":
+  In Gemfile:
+    spree_editor (>= 0) ruby depends on
+      jquery-rails (<= 1.0.19, >= 1.0.18) ruby
+
+    jquery-rails (2.0.1)
+
+=end
 group :development, :test do
   gem 'rspec-rails'
   gem 'sqlite3'

@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
   
+  get "tinymce_assets/create"
+
   get "sessions/destroy"
   get "sessions/new"
   get "home/index"
@@ -7,6 +9,8 @@ Blog::Application.routes.draw do
   get "contact/index"
   get "about/index"  
   get "portfolio/index"
+  
+  post '/tinymce_assets' => 'tinymce_assets#create'
   
   resources :contacts #, only: [:new, :create]
   resources :sessions
