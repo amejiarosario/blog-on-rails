@@ -6,6 +6,6 @@ class UserMailer < ActionMailer::Base
     @name = name
     @email = email
     @message = message
-    mail to: @email, subject: "Feedback from #{email}"
+    mail to: "webmaster@adrianmejia.com", subject: "Feedback from #{email}"
   end
 end

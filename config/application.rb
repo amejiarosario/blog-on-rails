@@ -66,8 +66,8 @@ module Blog
       domain: "adrianmejia.com",
       authentication: "plain",
       enable_starttls_auto: true,
-      user_name: "adriansky@gmail.com",
-      password: "sbbcackk"
+      user_name: "amejiarosario@gmail.com",
+      password: "sbbcackk2"
     }
     
   end
