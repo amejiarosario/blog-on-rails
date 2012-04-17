@@ -3,6 +3,7 @@ include ApplicationHelper
 class PostsController < ApplicationController
   #http_basic_authenticate_with name: "admin", password: "1234", except: [:index, :show]
   before_filter :require_login, :except => [:index, :show]
+  uses_tiny_mce(:options => AppConfig.default_mce_options, :only => [:new, :edit])
   
   # GET /posts
   # GET /posts.json

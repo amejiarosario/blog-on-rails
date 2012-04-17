@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120410041156) do
+ActiveRecord::Schema.define(:version => 20120415222424) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -90,6 +90,22 @@ ActiveRecord::Schema.define(:version => 20120410041156) do
   end
 
   add_index "tags", ["slug"], :name => "index_tags_on_slug"
+
+  create_table "tiny_prints", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_file_size"
+    t.string   "image_content_type"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "tiny_videos", :force => true do |t|
+    t.string   "original_file_name"
+    t.string   "original_file_size"
+    t.string   "original_content_type"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
