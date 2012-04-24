@@ -2,15 +2,12 @@
 %html
 	%head
 		- @title = "" if @title.nil?
-		%title= @title
+		%title= @title || 'Adrian Mejia Blog'
 		= stylesheet_link_tag "application", :media => "all"
-		= javascript_include_tag "application"
 		= stylesheet_link_tag "twitter/bootstrap"
 		= stylesheet_link_tag "twitter/bootstrap-responsive"
-		= javascript_include_tag "twitter/bootstrap"
 		= csrf_meta_tags
 		=raw '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
-		= render 'layouts/googleanalytics'
 	%body
 		%div.container
 			%header
@@ -55,6 +52,12 @@
 				= debug(params) 			
 				%br
 				= debug(flash)
+				%br
+				=# debug(request)
+				
+		= javascript_include_tag "twitter/bootstrap"
+		= javascript_include_tag "application"
+		= render 'layouts/googleanalytics'
 			
 / 
 	%div.navbar
