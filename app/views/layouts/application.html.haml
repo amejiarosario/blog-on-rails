@@ -1,13 +1,13 @@
 !!! html
 %html
 	%head
-		- @title = "" if @title.nil?
-		%title= @title || 'Adrian Mejia Blog'
+		%title= @title || 'Adrian Mejia - Blog'
 		= stylesheet_link_tag "application", :media => "all"
 		= stylesheet_link_tag "twitter/bootstrap"
 		= stylesheet_link_tag "twitter/bootstrap-responsive"
 		= csrf_meta_tags
 		=raw '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+		%meta{name: "description", description: "#{@meta_description or "Adrian Mejia's blog related to his work experiences in software engineering, web development, technologies, web frameworks and so on."}"}
 	%body
 		%div.container
 			%header
@@ -58,6 +58,7 @@
 		= javascript_include_tag "twitter/bootstrap"
 		= javascript_include_tag "application"
 		= render 'layouts/googleanalytics'
+		=# auto_discovery_link_tag(:rss, {:action => "feed"},{:title => "RSS Feed"}) # TODO add RSS feed
 			
 / 
 	%div.navbar
