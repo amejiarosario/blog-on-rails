@@ -17,7 +17,7 @@ class SitemapController < ApplicationController
   end
   
   def rss
-	@posts = Post.find(:all, :order => "updated_at DESC", :limit => 50000)
+	@posts = Post.find(:all, :order => "updated_at DESC", :limit => 10)
 	@base_url = "http://#{request.host_with_port}"
 	
 	respond_to do |format|
