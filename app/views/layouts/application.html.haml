@@ -2,7 +2,9 @@
 %html
 	%head
 		%title= @title || 'Adrian Mejia - Blog'
-		= stylesheet_link_tag "application", :media => "all"
+		=# stylesheet_link_tag "application"
+		-# TODO try cache multiple css
+		= stylesheet_link_tag "layout"
 		= stylesheet_link_tag "twitter/bootstrap"
 		= stylesheet_link_tag "twitter/bootstrap-responsive"
 		= csrf_meta_tags
@@ -23,23 +25,38 @@
 						- else
 							%li{:class => active?(@title, "Login") }= link_to "Login", login_path
 
-			%section.container-fluid#main-content
+			%section.container#main-content
 				%div.row-fluid
-					%div.span9
+					%div.span8
 						-# <!--Body content-->
 						= yield
-					%div.span3
+						
+						%h2=link_to "~/posts/preview", posts_path
+						= render "posts/index"
+						
+					%div.span4
 						-# <!--Sidebar content-->
 						%nav
-							%ul{:class=>"nav nav-tabs nav-stacked"}
-								- if signed_in?
+							- if @recent_posts and @recent_posts.any?
+								%ul.nav.nav-list
+									%h2= link_to "~/posts/recent", posts_path
+									- @recent_posts.each do |post|
+										%li= link_to "#{post.title}", post
+									%strong=raw "#{link_to "all posts...", posts_path }"
+							- if request.path == root_path
+								%ul.nav.nav-list
+									%h2= link_to "~/projects/latest", about_path
+									%li= link_to "TODO", "#"
+								%ul.nav.nav-list
+									%h2= link_to "~/about", about_path
+									= render "about/about"
+							- if signed_in?
+								%ul.nav.nav-list
+									%h2 ~/admin
 									%li= link_to "Profile", current_user
 									%li= link_to "Create a Post", new_post_path
 									%li= link_to "View messages", contacts_path
-									%li -
 									%li= link_to "Logout", logout_path
-
-			
 			%footer
 				%hr
 				= "Copyright © 2011-#{Time.now.year} by "
