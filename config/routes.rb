@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
   
+  #get "sitemap/index"
+
   get "sessions/destroy"
   get "sessions/new"
   get "home/index"
@@ -18,13 +20,14 @@ Blog::Application.routes.draw do
     resources :comments
   end
   
-  match '/register', :to => 'users#new'
-  match '/login', :to => 'sessions#new'
-  match '/logout', :to => 'sessions#destroy'
-  match '/contactme', :to => 'contacts#new'
-  match '/about', :to => 'about#index'
-  match '/portfolio', :to => 'portfolio#index'
-  match '/blog', :to => 'posts#index'
+  match 'register', :to => 'users#new'
+  match 'login', :to => 'sessions#new'
+  match 'logout', :to => 'sessions#destroy'
+  match 'contactme', :to => 'contacts#new'
+  match 'about', :to => 'about#index'
+  match 'portfolio', :to => 'portfolio#index'
+  match 'blog', :to => 'posts#index'
+  match 'sitemap', to: 'sitemap#index'
   
  
 
