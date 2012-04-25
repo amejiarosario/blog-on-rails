@@ -14,6 +14,7 @@
 		= stylesheet_link_tag "twitter/bootstrap-responsive"
 		= csrf_meta_tags
 		=raw '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+		= auto_discovery_link_tag(:rss, "/rss.xml", {:title => "RSS Feed"})
 		
 	%body
 		%div.container
@@ -67,5 +68,4 @@
 				
 		= javascript_include_tag "twitter/bootstrap"
 		= javascript_include_tag "application"
-		= render 'layouts/googleanalytics'
-		=# auto_discovery_link_tag(:rss, {:action => "feed"},{:title => "RSS Feed"}) # TODO add RSS feed
+		= render 'layouts/googleanalytics'		
