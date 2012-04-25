@@ -1,6 +1,6 @@
 module ApplicationHelper
   def active?(title, element)
-    if title.include? element
+    if title and title.include? element
       "active"
     else
       ""

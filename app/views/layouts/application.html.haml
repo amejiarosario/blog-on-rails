@@ -23,12 +23,12 @@
 						- else
 							%li{:class => active?(@title, "Login") }= link_to "Login", login_path
 
-			%section.container-fluid{id: "main-content"}
+			%section.container-fluid#main-content
 				%div.row-fluid
-					%div.span10
+					%div.span9
 						-# <!--Body content-->
 						= yield
-					%div.span2
+					%div.span3
 						-# <!--Sidebar content-->
 						%nav
 							%ul{:class=>"nav nav-tabs nav-stacked"}
@@ -53,23 +53,12 @@
 				%br
 				= debug(flash)
 				%br
-				=# debug(request)
+				=# debug(request.host)
+				=# debug(request.domain)
+				= debug(request.url)
+				= debug(request.remote_ip)
 				
 		= javascript_include_tag "twitter/bootstrap"
 		= javascript_include_tag "application"
 		= render 'layouts/googleanalytics'
 		=# auto_discovery_link_tag(:rss, {:action => "feed"},{:title => "RSS Feed"}) # TODO add RSS feed
-			
-/ 
-	%div.navbar
-		%div.navbar-inner
-			%div.container
-				%a.brand Adrian Mejia
-				%div.nav-collapse
-					%ul.nav
-						%li.active= link_to "Home", :controller=>:home 
-						%li= link_to "Portfolio", :controller=>:portfolio
-						%li= link_to "Blog", :controller=>:blog
-						%li= link_to "About", :controller=>:about
-						%li= link_to "Contact", :controller=>:contact
-						%li= link_to "Admin", :controller=>:admin
