@@ -1,3 +1,9 @@
+- content_for :title do
+	= "#{@post.title} | Adrian Mejia's Blog"
+
+- content_for :meta_description do
+	= "#{truncate(strip_tags(@post.content),length: 160, omission: "...")}"
+	
 %p#notice= notice
 = render "layouts/flash_errors"
 
