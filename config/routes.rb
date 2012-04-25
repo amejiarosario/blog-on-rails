@@ -28,7 +28,7 @@ Blog::Application.routes.draw do
   match 'portfolio', :to => 'portfolio#index'
   match 'blog', :to => 'posts#index'
   match 'sitemap', to: 'sitemap#index'
-  
+  match 'rss', to: 'sitemap#rss'
  
 
   # The priority is based upon order of creation:

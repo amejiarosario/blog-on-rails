@@ -2,7 +2,6 @@
 	Sitemap | Adrian Mejia's Blog
 
 %h1 Sitemap | Adrian Mejia's website
-- base_url = "http://#{request.host_with_port}"
 
 %h2= link_to "Menu", "#", name: "top"
 %ul
@@ -16,17 +15,17 @@
 %h3=link_to "Static Websites","#top", name: "static"
 - @static.each do |static|
 	%ul
-		%li= link_to "#{static}", "#{base_url}#{static}"
+		%li= link_to "#{static}", "#{@base_url}#{static}"
 
 
 %hr
 %h3=link_to "Posts","#top", name: "blog"
 - @posts.each do |post|
 	%ul
-		%li= link_to "#{post.title}", "#{base_url}#{url_for(post)}"
+		%li= link_to "#{post.title}", "#{@base_url}#{url_for(post)}"
 %hr
 %h3=link_to "Tags","#top", name: "tags"
 - @tags.each do |tag|
 	%ul
-		%li= link_to "#{tag.name}", "#{base_url}#{url_for(tag)}"
+		%li= link_to "#{tag.name}", "#{@base_url}#{url_for(tag)}"
 
