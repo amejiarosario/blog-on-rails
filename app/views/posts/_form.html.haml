@@ -29,9 +29,8 @@
 		= f.label :title
 		= f.text_field :title
 	.field
-		= tinymce :theme => "advanced"
 		= f.label :content
-		= f.text_area :content, class: "tinymce", style: "width: 100%; height: 40%;"
+		= f.text_area :content, style: "width: 100%; height: 40%;"
 	%h2 Tags:
 	= render :partial => 'tags/form', :locals => {:form => f}
 	.actions

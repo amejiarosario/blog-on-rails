@@ -9,7 +9,6 @@ gem 'rails', '3.2.1'
 gem 'haml'
 gem 'haml-rails'
 gem 'gravatar_image_tag' # gravatar
-gem 'tinymce-rails' #wysiwyg
 gem 'friendly_id' #pretty url
 gem 'sitemap'
 
