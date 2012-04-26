@@ -1,6 +1,6 @@
 class SitemapController < ApplicationController
   layout nil
-  #after_filter :update_search_engines
+  after_filter :update_search_engines
   
   def index
 	# Things to include in the sitemap

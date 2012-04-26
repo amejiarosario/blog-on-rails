@@ -20,12 +20,12 @@
 =raw post_tags(@post)
 
 %hr
-%h2= "#{pluralize(@post.comments.length, "Comment")}"
-= render @post.comments if @post.comments.exists?
+/%h2= "#{pluralize(@post.comments.length, "Comment")}"
+/= render @post.comments if @post.comments.exists?
 
 %hr
 %h2 Add a new comment
-= render "comments/form"
+=# render "comments/form"
 
 = render "comments/disqus"
 

@@ -10,11 +10,14 @@
 		/[if lt IE 9]
 			= javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
 		= stylesheet_link_tag "application", :media => "all"
-		= stylesheet_link_tag "twitter/bootstrap"
-		= stylesheet_link_tag "twitter/bootstrap-responsive"
+		=# stylesheet_link_tag "twitter/bootstrap"
+		=# stylesheet_link_tag "twitter/bootstrap-responsive"
+		= stylesheet_link_tag "bootstrap.min"
+		= stylesheet_link_tag "prettify"
 		= csrf_meta_tags
 		=raw '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
 		= auto_discovery_link_tag(:rss, "/rss.xml", {:title => "RSS Feed"})
+		= content_for?(:stylesheets) ? yield(:stylesheets) : ""
 		
 	%body
 		%div.container
@@ -23,7 +26,7 @@
 					%ul{:class => "nav nav-pills"}
 						%li{:class => active?(@title, "Home") }= link_to "Home", root_path
 						%li{:class => active?(@title, "Portfolio") }= link_to "Portfolio", portfolio_path
-						%li{:class => active?(@title, "Blog") }= link_to "Blog", blog_path
+						%li{:class => active?(yield(:title), "Blog") }= link_to "Blog", blog_path
 						%li{:class => active?(@title, "About") }= link_to "About", about_path
 						%li{:class => active?(@title, "Contact") }= link_to "Contact", contactme_path
 						- if signed_in?
@@ -66,6 +69,10 @@
 				= debug(request.url)
 				= debug(request.remote_ip)
 				
-		= javascript_include_tag "twitter/bootstrap"
+		=# javascript_include_tag "twitter/bootstrap"
 		= javascript_include_tag "application"
-		= render 'layouts/googleanalytics'		
+		= javascript_include_tag "prettify"
+		= javascript_include_tag "bootstrap.min"
+		= render 'layouts/googleanalytics'
+		= content_for?(:javascripts) ? yield(:javascripts) : ""
+		
