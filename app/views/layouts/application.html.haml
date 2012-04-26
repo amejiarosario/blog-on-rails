@@ -3,7 +3,8 @@
 	%head
 		-# http://gradients.glrzad.com/ TODO use it
 		%meta(charset="utf-8")
-		%meta{name: "description", description: "#{@meta_description or "Adrian Mejia's website and articles related to his work experiences in software engineering, web development, technologies, web frameworks and so on."}"}
+		%meta{name: "description", content: "#{content_for?(:meta_description) ? yield(:meta_description) : "Adrian Mejia's website and articles related to his work experiences in software engineering, web development, technologies, web frameworks and so on."}"}
+		%meta{name: "keywords", content: "#{content_for?(:meta_keywords) ? yield(:meta_keywords) : "software engineering, ruby on rails, ruby, java, blog, technology, internet, person"}"}
 		%title= content_for?(:title) ? yield(:title) : 'Adrian Mejia - Blog'
 		/ Le HTML5 shim, for IE6-8 support of HTML elements
 		/[if lt IE 9]
@@ -13,6 +14,7 @@
 		= stylesheet_link_tag "twitter/bootstrap-responsive"
 		= csrf_meta_tags
 		=raw '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+		= auto_discovery_link_tag(:rss, "/rss.xml", {:title => "RSS Feed"})
 		
 	%body
 		%div.container
@@ -66,5 +68,4 @@
 				
 		= javascript_include_tag "twitter/bootstrap"
 		= javascript_include_tag "application"
-		= render 'layouts/googleanalytics'
-		=# auto_discovery_link_tag(:rss, {:action => "feed"},{:title => "RSS Feed"}) # TODO add RSS feed
+		= render 'layouts/googleanalytics'		
