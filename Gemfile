@@ -22,6 +22,7 @@ group :test do
   gem 'webrat'
   gem 'spork'
   gem 'factory_girl_rails'
+  gem 'spork'
 end
 
 group :production do
