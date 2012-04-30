@@ -4,4 +4,4 @@ It's yet another blog implemented in Rails, some custom features are being devel
 
 Still in active development... demo in:  
 
-blog.adrianmejia.com
+http://blog.adrianmejia.com
